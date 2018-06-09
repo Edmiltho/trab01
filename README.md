@@ -131,7 +131,6 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
 [Script de inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/INSERT-TABLES.sql)
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
