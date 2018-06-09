@@ -148,6 +148,36 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+[Consulta cartao - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.sql)
+![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.png)
+
+[Consulta catergotia_veiculo - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.sql)
+![Consulta catergotia_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.png)
+
+[Consulta gerencia - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.sql)
+![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.png)
+
+[Consulta paga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.sql)
+![Consulta paga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.png)
+
+[Consulta pessoa - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.sql)
+![Consulta pessoa - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.png)
+
+[Consulta reserva_vaga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.sql)
+![Consulta reserva_vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.png)
+
+[Consulta sensor - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.sql)
+![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.png)
+
+[Consulta tipo_sensor - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.sql)
+![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.png)
+
+[Consulta vaga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.sql)
+![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.png)
+
+[Consulta veiculo - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.sql)
+![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.png)
+
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
