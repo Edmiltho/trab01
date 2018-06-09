@@ -118,6 +118,20 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
     email: Campo onde se armazena o email  de cada pessoa.
     id: Campo onde armazena o Id referente a cada pessoa no sistema.
     credito: Campo onde armazena o valor de credito na conta de cada pessoa.
+    cpf: Campo onde armazena os dados do numero de Cadastro de pessoa fisica do usuario.
+    cnpj:Campo onde armazena os dados do numero de CNPJ do usuario
+    pessoa_tipo: Campo onde fica armazendo o sexo da pessoa.
+    cnh: Campo ode fica armazenado o numero referente ao CNH da pessoa.
+    telefone: Campo onde fica armazenado o numero de contato da pessoa.
+    id_pessoa: campo onde fica armazenado o numero de Id da pessoa no sistema.
+    Reserva: Tabela onde fica armazenado dados referentes a reserva feita pelo usuario.
+    data_reserva: Campo onde se armazena a data exata referente a reserva.
+    hora_entrada: Campo onde se armazena a hora que o veiculo entrou em sua vaga.
+    hora_saida: Campo onde fica armazenado o horario que o veiculo saiu do estacionamento
+    Gerencia: Tabela referente a dados que o administrador tem acesso para saber onde cada pessoa está estacionada.
+    id_vaga: Tabela com id referente a vaga reservada.
+    id_pessoa: Tabela reerente ao id da pessoa que reservou a vaga.
+
 
 
 ### 6	MODELO LÓGICO<br>
