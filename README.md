@@ -13,7 +13,7 @@ Thiago Alves: thiagofelicio@hotmail.com<br>
 <b>Grupo de Análise</b><br>
 Integrantes: Andreângelo, Anne, Caicke e Emanuel<br>
 Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesmo projeto, que pode ser acessado no link
-[github.com/CasaInteligenteBD1/trab01gv](https://github.com/CasaInteligenteBD1/trab01gv).<br>
+[Casa Inteligente](https://github.com/CasaInteligenteBD1/trab01gv).<br>
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
@@ -26,16 +26,15 @@ Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesm
 ### 3.MINI-MUNDO Novo<br>
 
 > 
-O Sistema proposto ao usuário apresenta as seguintes informações .Do cliente serão armazenados o nome,senha,e-mail,CPF,numero de telefone e placa do veiculo.Das formas de pagamentos serão armazenados numero de cartão de crédito, conta de PayPal e créditos depositados. O usuário com o aplicativo pode de qualquer lugar efetuar a reserva de um estacionamento caso ele já não tenha sido reservado por outro, caso não tenha sido reservado o mesmo poderá efetuar uma reserva com base nos seus dados já cadastrados, escolhendo assim seu método de pagamento mais apropriado e sendo informado do valor a ser pago por essa vaga.
-O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail, senha e CNPJ, Dos estacionamentos serão armazenados o Local e código da vaga, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas assim que desejar, podendo alterar também localidades e lugares pelo mapa.
+O Sistema proposto ao usuário apresenta as seguintes informações .Do cliente serão armazenados o nome,senha,e-mail,CPF,numero de telefone e placa do veiculo.Das formas de pagamentos serão armazenados numero de cartão de crédito, data de vencimento, nome impresso no cartão, além dos créditos depositados. O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de vaga em um estacionamento caso esta já não tenha sido reservado, escolhendo assim o método de pagamento mais apropriado e fetuando o pagamento do valor referente aquele estacionamento informado pelo próprio aplicativo.
+O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail, senha e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento.
 <br>
 
-[Mockup App](https://github.com/GrupoDaVaga/trab01/blob/master/App%20BD1.pdf)  
-[Mockup Web](https://github.com/GrupoDaVaga/trab01/blob/master/arquivos/ESTACIONA%20WEB.pdf)  
-
+[Mockup App](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20APP.pdf)  
+[Mockup Web](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20WEB.pdf)  
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
-![Tabela_de_dados_estacIonA.xls](https://github.com/GrupoDaVaga/trab01/blob/907e818b28a4cde7f823d94d359c5092db3cf304/arquivos/C%C3%B3pia%20de%204_1_tabela_de_dados_estacIonA_2%20(1).xlsx)
+[Tabela_de_dados_estacIonA](https://drive.google.com/open?id=1wyr_sFZ0AyqciscpmG4qH-GHCdzUoFPeD8juoA5IZ3M)
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?<br>
@@ -51,31 +50,20 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
    - Relatório sobre o veículo de determinada reserva;<br>
    - Histórico de veículos estacionados em determinada vaga.
     
-    
 >## Marco de Entrega 01 em: (02/04/2018)<br>
 
 ### 5.MODELO CONCEITUAL<br>
-    A) NOTACAO ENTIDADE RELACIONAMENTO 
-        * Para nosso prótótipo limitaremos o modelo conceitual nas 6 principais entidades do escopo
-        * O protótipo deve possui no mínimo duas relações N para N
-        * o mínimo de entidades do modelo conceitual será igual a 5
-        
-![Modelo Conceitual](https://github.com/GrupoDaVaga/trab01/blob/00a8131fcdcfe5842b88a0ae7e8f954b3026e54d/modelo_normalizado_final.brM3)
-    
-    B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
-    C) QUALIDADE 
-        Garantir que a semântica dos atributos seja clara no esquema
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas
-    
-        
+       
+![Modelo conceitual - PNG](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Imagens/Conceitual.png)
+
+[Modelo Conceitual - Formato BrModelo](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Conceitual.brM3)    
+
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo do Blackcard]: Matheus Pinto, Pedro Cruz, Andre Phelipe, Herbert Wander, Jack Johnson.
     [Grupo EstacIonA (Analise)]: Caicke Pinheiro, Andreangelo Patuzzo, Emanuel Gloria, Anne Caroline.
 
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
     Campo CNPJ: em nosso projeto optamos por uma pessoa Juridica cadastrar o CPNJ da empresa e pessoa fisica
     cadastrar o CPF para uso pessoal.
     Pois utilizando essa decisão podemos poupar de criar uma nova tabela para outro problema.
@@ -87,13 +75,8 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
     Campo Tipo Sensor: em nosso projeto optamos também por RETIRAR o atributo tipo sensor e criamos uma tabela tipo sensor
     Pois com esse método resolveriamos o problema de adicionar novos tipos de sensores.
     
-    
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
 
->## Marco de Entrega 02 em: (23/04/2018)<br>
+>## Marco de Entrega 02 em: (11/05/2018)<br>
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [objeto]: [descrição do objeto]
     
@@ -103,32 +86,32 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+[Modelo Lógico - BrModelo](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Logico.brM3)
+
+![Modelo Lógico - PNG](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Imagens/Logico.png)
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas DDL 
-        (criação de tabelas, alterações, etc..)          
+[Modelo Físico - SQL](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Fisico.sql)
+
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físic
+        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
         b) formato .SQL
 
-#### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
+#### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
         (create para tabelas e estruturas de dados + dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
+        a) Junção dos scripts anteriores em um único script
+        (Drop para exclusão de tabelas + create para tabelas e estruturas de dados + dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
->## Marco de Entrega 03 em: (14/05/2018)<br>
+>## Marco de Entrega 03 em: (adiada)<br>
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
@@ -142,9 +125,10 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
 
->## Marco de Entrega 04 em: (04/06/2017)<br>
-    
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+
+>## Marco de Entrega 04 em: (08/06/2017)<br>
+
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
