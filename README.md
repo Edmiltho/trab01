@@ -135,7 +135,7 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
         b) formato .SQL
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
-        [Script de criação e inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/inserts/Jun%C3%A7%C3%A3o%20Create%20e%20Insert.sql)
+[Script de criação e inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/inserts/Jun%C3%A7%C3%A3o%20Create%20e%20Insert.sql)
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
