@@ -132,17 +132,15 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
 a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
-(https://github.com/GrupoDaVaga/trab01/blob/master/INSERT-TABLES.sql)
+[Script de inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/INSERT-TABLES.sql)
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
 [Script de criação e inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/inserts/Jun%C3%A7%C3%A3o%20Create%20e%20Insert.sql)
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script
-        (Drop para exclusão de tabelas + create para tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+[Script de criação e inserção e drop de tabelas - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/Jun%C3%A7%C3%A3o%20Create%20e%20Insert%20e%20Drop.sql)
+Foi usado o comando DROP nas tabelas gerencia e paga.
+
 >## Marco de Entrega 03 em: (adiada)<br>
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
