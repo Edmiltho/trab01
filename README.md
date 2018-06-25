@@ -159,34 +159,34 @@ Foi usado o comando DROP nas tabelas gerencia e paga.
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-[Consulta cartao - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.sql)
+SELECT * FROM cartao;
 ![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.png)
 
-[Consulta catergotia_veiculo - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.sql)
-![Consulta catergotia_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.png)
+SELECT * FROM categoria_veiculo;
+![Consulta categoria_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.png)
 
-[Consulta gerencia - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.sql)
+SELECT * FROM gerencia;
 ![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.png)
 
-[Consulta paga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.sql)
+SELECT * FROM paga;
 ![Consulta paga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.png)
 
-[Consulta pessoa - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.sql)
+SELECT * FROM pessoa;
 ![Consulta pessoa - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.png)
 
-[Consulta reserva_vaga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.sql)
+SELECT * FROM reserva_vaga;
 ![Consulta reserva_vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.png)
 
-[Consulta sensor - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.sql)
+SELECT * FROM sensor;
 ![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.png)
 
-[Consulta tipo_sensor - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.sql)
+SELECT * FROM tipo_sensor;
 ![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.png)
 
-[Consulta vaga - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.sql)
+SELECT * FROM vaga;
 ![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.png)
 
-[Consulta veiculo - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.sql)
+SELECT * FROM veiculo;
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
