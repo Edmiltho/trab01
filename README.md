@@ -225,9 +225,79 @@ Foi usado o comando DROP nas tabelas gerencia e paga.
 ![Consulta where 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%204.png)
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+    SELECT fk_pessoa_id_pessoa, fk_vaga_id_vaga, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado 
+    FROM  reserva_vaga
+    WHERE fk_pessoa_id_pessoa = 6;
+
+![Consulta aritmetica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%201.png)
+
+    SELECT fk_pessoa_id_pessoa, fk_vaga_id_vaga, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado, preco_vaga, (((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * preco_vaga) as custo_total
+    FROM  reserva_vaga
+    INNER JOIN vaga
+    on (reserva_vaga.fk_vaga_id_vaga = vaga.id_vaga)
+    WHERE fk_pessoa_id_pessoa = 6;
+
+![Consulta aritmetica 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%202.png)
+
+    SELECT reserva_vaga.fk_pessoa_id_pessoa, sum(hora_saida - hora_entrada) as tempo_estacionado, sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * preco_vaga) as custo_total, credito , (credito - sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * preco_vaga)) as credito_remanescente
+    FROM  reserva_vaga
+    INNER JOIN vaga
+    on (reserva_vaga.fk_vaga_id_vaga = vaga.id_vaga)
+    INNER JOIN pessoa 
+    on (reserva_vaga.fk_pessoa_id_pessoa = pessoa.id_pessoa)
+    WHERE reserva_vaga.fk_pessoa_id_pessoa > 6
+    GROUP BY reserva_vaga.fk_pessoa_id_pessoa ,pessoa.credito;
+
+![Consulta aritmetica 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%203.png)
+
+    SELECT preco_vaga,id_vaga,estado_vaga
+    FROM vaga
+    WHERE estado_vaga = 'ES' or preco_vaga >= '3';
+
+![Consulta logica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%201.png)
+
+    SELECT * 
+    FROM pessoa
+    WHERE cnh <> '';
+
+![Consulta logica 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%202.png)
+
+    SELECT *
+    FROM reserva_vaga
+    WHERE fk_vaga_id_vaga < 5 and fk_pessoa_id_pessoa > 3;
+
+![Consulta logica 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%203.png)
+
+    SELECT situacao, id_sensor
+    FROM sensor
+    WHERE fk_tipo_sensor_id_tipo = 1 and situacao = true;
+
+![Consulta logica 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%204.png)
+
+    SELECT situacao, id_sensor
+    FROM sensor
+    WHERE fk_tipo_sensor_id_tipo = 1 and situacao = true or fk_tipo_sensor_id_tipo = 2 and situacao = true; 
+
+![Consulta logica 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%205.png)
+
+    SELECT fk_vaga_id_vaga as identificador_vaga, fk_pessoa_id_pessoa as identificador_pessoa
+    FROM reserva_vaga
+    WHERE fk_vaga_id_vaga < 8 and fk_pessoa_id_pessoa < 7; 
+
+![Consulta rename 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+
+    SELECT cnh as carteira_motorista, telefone, id_pessoa
+    FROM pessoa
+    WHERE cnh > '20014364166';
+
+![Consulta rename 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%202.png)
+
+    SELECT nome, email, perfil as tipo_de_perfil
+    FROM pessoa;
+
+![Consulta rename 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%203.png)
+
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
