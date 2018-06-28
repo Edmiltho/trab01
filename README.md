@@ -159,47 +159,71 @@ Foi usado o comando DROP nas tabelas gerencia e paga.
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-SELECT * FROM cartao;
+    SELECT * FROM cartao;
 
 ![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.png)
 
-SELECT * FROM categoria_veiculo
+    SELECT * FROM categoria_veiculo
 
 ![Consulta categoria_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.png)
 
-SELECT * FROM gerencia;
+    SELECT * FROM gerencia;
 
 ![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.png)
 
-SELECT * FROM paga;
+    SELECT * FROM paga;
 
 ![Consulta paga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.png)
 
-SELECT * FROM pessoa;
+    SELECT * FROM pessoa;
 
 ![Consulta pessoa - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.png)
 
-SELECT * FROM reserva_vaga;
+    SELECT * FROM reserva_vaga;
 
 ![Consulta reserva_vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.png)
 
-SELECT * FROM sensor;
+    SELECT * FROM sensor;
 
 ![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.png)
 
-SELECT * FROM tipo_sensor;
+    SELECT * FROM tipo_sensor;
 
 ![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.png)
 
-SELECT * FROM vaga;
+    SELECT * FROM vaga;
 
 ![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.png)
 
-SELECT * FROM veiculo;
+    SELECT * FROM veiculo;
 
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+    SELECT nome, email, perfil
+    FROM pessoa
+    WHERE id_pessoa = 2;
+    
+![Consulta where 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%201.png)
+
+    SELECT preco_vaga,id_vaga,estado_vaga
+    FROM vaga
+    WHERE estado_vaga = 'ES';
+    
+![Consulta where 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%202.png)
+
+    SELECT placa_veiculo, fk_categoria_veiculo_categoria_veiculo_pk
+    FROM veiculo
+    WHERE fk_categoria_veiculo_categoria_veiculo_pk = 'A';
+    
+![Consulta where 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%203.png)
+
+    SELECT situacao,  fk_tipo_sensor_id_tipo, id_sensor
+    FROM sensor
+    WHERE  fk_tipo_sensor_id_tipo = 1;
+    
+![Consulta where 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%204.png)
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
