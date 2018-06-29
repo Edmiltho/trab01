@@ -1,3 +1,4 @@
+Drop TABLE if exists VAGA,VEICULO,CONDUTOR,EMPRESA,PAGAMENTO,RESERVA,SENSOR;
 CREATE TABLE VAGA (
     Seção_Vaga varchar(45),
     Andar_Vaga integer,
@@ -400,3 +401,5 @@ INSERT INTO paga(
 INSERT INTO paga(
             fk_pessoa_id_pessoa, fk_pessoa_id_pessoa_, valor, metodo)
     VALUES (4, 12, 18, 1);
+	
+	select * from paga;
