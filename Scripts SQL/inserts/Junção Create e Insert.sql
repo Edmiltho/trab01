@@ -1,12 +1,10 @@
-/* Lógico: */
-
 CREATE TABLE VAGA (
     Seção_Vaga varchar(45),
     Andar_Vaga integer,
     Estado_Vaga varchar(45),
     Cidade_Vaga varchar(45),
     CEP_Vaga integer,
-    preco_vaga money,
+    preco_vaga float,
     Horario_vaga time,
     id_Vaga serial PRIMARY KEY
 );
@@ -30,7 +28,7 @@ CREATE TABLE PESSOA (
     email varchar(45),
     perfil boolean,
     id_pessoa serial PRIMARY KEY,
-    Credito money,
+    Credito float,
     Cpf varchar(14),
     Cnpj varchar(18),
     PESSOA_TIPO INT,
@@ -73,7 +71,7 @@ CREATE TABLE Gerencia (
 CREATE TABLE Paga (
     FK_PESSOA_id_pessoa serial,
     FK_PESSOA_id_pessoa_ serial,
-    Valor money,
+    Valor float,
     Metodo varchar(150)
 );
  
@@ -225,24 +223,23 @@ INSERT INTO tipo_sensor(
 
 
 
-INSERT INTO vaga(
-            "seção_vaga", andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
+INSERT INTO vaga(seção_vaga, andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
             preco_vaga, horario_vaga)
     VALUES ('A',1,'ES','Vila Velha','29320123',3,'09:20:00');
 INSERT INTO vaga(
-            "seção_vaga", andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
+            seção_vaga, andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
             preco_vaga, horario_vaga)
     VALUES ('D',5,'SP','Santos','12456090',15,'10:30:00');
 INSERT INTO vaga(
-            "seção_vaga", andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
+            seção_vaga, andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
             preco_vaga, horario_vaga)
     VALUES ('B',3,'SP','São Vicente','01505010',9,'18:55:00');
 INSERT INTO vaga(
-            "seção_vaga", andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
+            seção_vaga, andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
             preco_vaga, horario_vaga)
     VALUES ('A',2,'MG','Belo Horizonte','29678000',4,'17:30:00');
 INSERT INTO vaga(
-            "seção_vaga", andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
+            seção_vaga, andar_vaga, estado_vaga, cidade_vaga, cep_vaga, 
             preco_vaga, horario_vaga)
     VALUES ('E',4,'MG','Belo Horizonte','30110009',6,'07:10:00');
 			
@@ -403,4 +400,3 @@ INSERT INTO paga(
 INSERT INTO paga(
             fk_pessoa_id_pessoa, fk_pessoa_id_pessoa_, valor, metodo)
     VALUES (4, 12, 18, 1);
-
