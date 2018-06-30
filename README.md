@@ -54,9 +54,9 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
 
 ### 5.MODELO CONCEITUAL<br>
        
-![Modelo conceitual - PNG](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Imagens/Conceitual.png)
+![Modelo conceitual - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Imagens/Conceitual.png)
 
-[Modelo Conceitual - Formato BrModelo](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Conceitual.brM3)    
+[Modelo Conceitual - Formato BrModelo](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Conceitual.brM3)    
 
     
 #### 5.1 Validação do Modelo Conceitual
