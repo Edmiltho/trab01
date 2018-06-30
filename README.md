@@ -56,9 +56,9 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
 
 ### 5.MODELO CONCEITUAL<br>
        
-![Modelo conceitual - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Imagens/Conceitual.png)
+![Modelo conceitual - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Imagens/Conceitual_top.png)
 
-[Modelo Conceitual - Formato BrModelo](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Conceitual.brM3)    
+[Modelo Conceitual - Formato BrModelo](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Conceitual_top.brM3)    
 
     
 #### 5.1 Validação do Modelo Conceitual
@@ -137,12 +137,12 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
 
 
 ### 6	MODELO LÓGICO<br>
-[Modelo Lógico - BrModelo](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Logico.brM3)
+[Modelo Lógico - BrModelo](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Logico_top.brM3)
 
-![Modelo Lógico - PNG](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Imagens/Logico.png)
+![Modelo Lógico - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Imagens/Logico_top.png)
 
 ### 7	MODELO FÍSICO<br>
-[Modelo Físico - SQL](https://github.com/GrupoDaVaga/trab01/blob/david/Modelo%20Normalizado/Fisico.sql)
+[Modelo Físico - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Modelo%20Normalizado/Fisico_top.sql)
 
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
