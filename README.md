@@ -33,6 +33,8 @@ O sistema proposto ao administrador apresenta as seguintes informações: Da emp
 [Mockup App](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20APP.pdf)  
 [Mockup Web](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20WEB.pdf)  
 
+OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram durante o projeto após a licensa do mesmo ter expirado, e como podem ver nesta [imagem](https://github.com/GrupoDaVaga/trab01/blob/master/mockups/balsamiq.png), a licença gratuita não permite edições nos mockups após 30 dias de uso
+
 #### 4.1 TABELA DE DADOS DO SISTEMA:
 [Tabela_de_dados_estacIonA](https://drive.google.com/open?id=1wyr_sFZ0AyqciscpmG4qH-GHCdzUoFPeD8juoA5IZ3M)
     
