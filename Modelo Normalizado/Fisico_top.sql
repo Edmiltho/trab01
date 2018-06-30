@@ -20,9 +20,9 @@ CREATE TABLE CLIENTE (
     id SERIAL PRIMARY KEY,
     nome VARCHAR,
     email VARCHAR,
-    cpf INTEGER(20),
-    cnh INTEGER(20),
-    telefone INTEGER(20),
+    cpf INTEGER,
+    cnh INTEGER,
+    telefone INTEGER,
     saldo MONEY,
     UNIQUE (id, email, cpf, cnh)
 );
@@ -51,7 +51,7 @@ CREATE TABLE STATUS_RESERVA (
 CREATE TABLE CARTAO (
     id SERIAL PRIMARY KEY UNIQUE,
     FK_CLIENTE_id SERIAL,
-    numero INTEGER(20),
+    numero INTEGER,
     validade VARCHAR,
     nome_impresso VARCHAR
 );
