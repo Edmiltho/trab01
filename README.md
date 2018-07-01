@@ -27,7 +27,7 @@ Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesm
 
 > 
 O Sistema proposto ao usuário apresenta as seguintes informações .Do cliente serão armazenados o nome,e-mail, CPF, Número da CNH, telefone, além de qual veículo possui.Das formas de pagamentos serão armazenados numero de cartão de crédito, data de vencimento, nome impresso no cartão, além dos créditos depositados. O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de vaga em um estacionamento caso esta já não tenha sido reservado, escolhendo assim o método de pagamento mais apropriado e fetuando o pagamento do valor referente aquele estacionamento informado pelo próprio aplicativo.
-O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento, deste aramzenaremos nome, email e CPF. 
+O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento, deste armzenaremos nome, email e CPF. 
 <br>
 
 [Mockup App](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20APP.pdf)  
