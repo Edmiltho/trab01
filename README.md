@@ -95,33 +95,21 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
     saldo: Campo referente ao saldo do cliente
     Sensor: Tabela onde se armazena dados referentes a utilização dos sensores.
     idSensor: Codigo de cadastro do sensor.
-    situação: Campo que armazena a situação do sensor, sendo ela desligada ou ligada.
+    descrição: Campo que armazena a situação do sensor, sendo ela desligada ou ligada.
     tipo: Campo onde fica armazenada as caracteriscas do sensor.
     veiculo: Tabela onde fica armazenado dados referentes aos veiculos dos condutores.
-    placa_veiculo: Campo onde armazena o numero da placa de cada veiculo.
-    categ_veiculo: Campo onde armazena a categoria do veiculo com base em suas caracteristicas.
-    id_veiculo: Campo onde fica armazenado o codigo do veiculo.
-    tipo_sensor: Tabela onde fica armazenado dados referentes aos sensores.
-    id_tipo: Campo onde se armazena o codigo referente a cada tipo de sensor.
-    descrição: Campo onde descreve o sensor com base no seu Id.
-    Pessoa: Tabela onde se armazena dados de todas as pessoas.
-    nome: Campo onde se armazena o nome de cada pessoa do sistema.
-    email: Campo onde se armazena o email  de cada pessoa.
-    id: Campo onde armazena o Id referente a cada pessoa no sistema.
-    credito: Campo onde armazena o valor de credito na conta de cada pessoa.
-    cpf: Campo onde armazena os dados do numero de Cadastro de pessoa fisica do usuario.
-    cnpj:Campo onde armazena os dados do numero de CNPJ do usuario
-    pessoa_tipo: Campo onde fica armazendo o sexo da pessoa.
-    cnh: Campo ode fica armazenado o numero referente ao CNH da pessoa.
-    telefone: Campo onde fica armazenado o numero de contato da pessoa.
-    id_pessoa: campo onde fica armazenado o numero de Id da pessoa no sistema.
-    Reserva: Tabela onde fica armazenado dados referentes a reserva feita pelo usuario.
-    data_reserva: Campo onde se armazena a data exata referente a reserva.
-    hora_entrada: Campo onde se armazena a hora que o veiculo entrou em sua vaga.
-    hora_saida: Campo onde fica armazenado o horario que o veiculo saiu do estacionamento
-    Gerencia: Tabela referente a dados que o administrador tem acesso para saber onde cada pessoa está estacionada.
-    id_vaga: Tabela com id referente a vaga reservada.
-    id_pessoa: Tabela reerente ao id da pessoa que reservou a vaga.
+    placa: Campo onde armazena o numero da placa de cada veiculo.
+    categoria: Campo onde armazena a categoria do veiculo com base em suas caracteristicas.
+    estacionamento: Tabela onde fica armazenado dados referentes a reserva feita pelo usuario.
+    nome: Campo onde se armazena nome referente a reserva.
+    primeira_hora: Campo onde se armazena a hora que o veiculo entrou em sua vaga.
+    val_hora: Campo onde fica armazenado o horario que o veiculo saiu do estacionamento.
+    cartão: Tabela onde fica armazenados dados referentes ao cartão do cliente.
+    validade:Campo com dados referente a data de validade do cartão do cliente
+    nome_impressão: Campo com dados referente ao nome do cliente no cartão.
+    numero: Campo que armazena o numero do cartão do cliente.
+    endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
+    
 
 
 
