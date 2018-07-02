@@ -226,8 +226,8 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 ![Consulta aritmetica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%201.png)
 
-    SELECT fk_cliente_id, fk_vagas_id, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
-    (((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora) as custo_total
+    SELECT fk_cliente_id as id_cliente, fk_vagas_id as id_vaga, hora_entrada, hora_saida, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
+    (((((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) -1 )* val_hora) + primira_hora) as custo_total
     FROM  reserva
     INNER JOIN estacionamento
     on (reserva.fk_vagas_id = estacionamento.id)
