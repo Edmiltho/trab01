@@ -290,73 +290,73 @@ Foi usado o comando DROP nas tabelas gerencia e paga.
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
-SELECT *
-FROM cliente
-WHERE nome like '%l%';
+    SELECT *
+    FROM cliente
+    WHERE nome like '%l%';
 
-![Consulta like 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta like 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%201.png)
 
-SELECT *
-FROM cartao
-WHERE numero like '%2%';
+    SELECT *
+    FROM cartao
+    WHERE numero like '%2%';
 
-![Consulta like 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta like 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%202.png)
 
-SELECT *
-FROM veiculo
-WHERE placa ilike '%a%';
+    SELECT *
+    FROM veiculo
+    WHERE placa ilike '%a%';
 
-![Consulta like 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta like 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%203.png)
 
-SELECT *
-FROM cartao
-WHERE nome_impresso ilike '%d%';
+    SELECT *
+    FROM cartao
+    WHERE nome_impresso ilike '%d%';
 
-![Consulta like 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta like 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%204.png)
 
-SELECT *
-FROM categoria_veiculo
-WHERE descricao ilike '%h%';
+    SELECT *
+    FROM categoria_veiculo
+    WHERE descricao ilike '%h%';
 
-![Consulta like 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta like 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%205.png)
 
-SELECT nome_impresso, current date as data_atual, validade,
-date_part('year',(age(validade,current_date))) as tempo_restante
-FROM cartao;
+    SELECT nome_impresso, current date as data_atual, validade,
+    date_part('year',(age(validade,current_date))) as tempo_restante
+    FROM cartao;
 
-![Consulta data 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%201.png)
 
-SELECT fk_vagas_id, fk_cliente_id, extract('year' from (data)) as ano_reserva
-FROM reserva
-WHERE fk_vagas_id > 2;
+    SELECT fk_vagas_id, fk_cliente_id, extract('year' from (data)) as ano_reserva
+    FROM reserva
+    WHERE fk_vagas_id > 2;
 
-![Consulta data 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%202.png)
 
-SELECT  nome_impresso, numero, fk_cliente_id, extract('month' from validade) as mes_vencimento
-FROM cartao
-WHERE numero > '4024007162979677';
+    SELECT  nome_impresso, numero, fk_cliente_id, extract('month' from validade) as mes_vencimento
+    FROM cartao
+    WHERE numero > '4024007162979677';
 
-![Consulta data 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%203.png)
 
-SELECT age(validade,current_date) as qtd_dias
-FROM cartao;
+    SELECT age(validade,current_date) as qtd_dias
+    FROM cartao;
 
-![Consulta data 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%204.png)
 
-SELECT age(current_date,data) as qtd_dias
-FROM reserva;
+    SELECT age(current_date,data) as qtd_dias
+    FROM reserva;
 
-![Consulta data 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%205.png)
 
-SELECT age(current_date,data) as qtd_dias
-FROM pagamento;
+    SELECT age(current_date,data) as qtd_dias
+    FROM pagamento;
 
-![Consulta data 6 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 6 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%206.png)
 
-SELECT fk_cliente_id, valor, fk_metodo_pagamento_id, date_part('year',(age(current_date,data))) as tempo_pagamento_efetuado
-FROM pagamento;
+    SELECT fk_cliente_id, valor, fk_metodo_pagamento_id, date_part('year',(age(current_date,data))) as tempo_pagamento_efetuado
+    FROM pagamento;
 
-![Consulta data 7 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
+![Consulta data 7 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%207.png)
 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
