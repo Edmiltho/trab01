@@ -107,7 +107,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     estacionamento: Tabela onde fica armazenado dados referentes a reserva feita pelo usuario.
     nome: Campo onde se armazena nome referente a reserva.
     primeira_hora: Campo onde se armazena a hora que o veiculo entrou em sua vaga.
-    val_hora: Campo onde fica armazenado o horario que o veiculo saiu do estacionamento.
+    val_hora: Campo onde fica armazenado o valor/hora.
     cartão: Tabela onde fica armazenados dados referentes ao cartão do cliente.
     validade:Campo com dados referente a data de validade do cartão do cliente
     nome_impressão: Campo com dados referente ao nome do cliente no cartão.
