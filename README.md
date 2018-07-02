@@ -127,7 +127,6 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
 [Script de criação e inserção e drop de tabelas - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/drop_create_insert.sql)
-Foi usado o comando DROP nas tabelas gerencia e paga.
 
 >## Marco de Entrega 03 em: (adiada)<br>
 
