@@ -27,7 +27,8 @@ Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesm
 
 > 
 O Sistema proposto ao usuário apresenta as seguintes informações .Do cliente serão armazenados o nome,e-mail, CPF, Número da CNH, telefone, além de qual veículo possui.Das formas de pagamentos serão armazenados numero de cartão de crédito, data de vencimento, nome impresso no cartão, além dos créditos depositados. O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de vaga em um estacionamento caso esta já não tenha sido reservado, escolhendo assim o método de pagamento mais apropriado e fetuando o pagamento do valor referente aquele estacionamento informado pelo próprio aplicativo.
-O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento, deste armzenaremos nome, email e CPF. 
+O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento, deste armzenaremos nome, email e CPF.
+Do período estacionado: o sistema registrá via reserva o horario de entrada do veículo, o que será confirmado via sensores nas vagas, e detectará automaticamente a saída do mesmo, calculando automaticamente o valor a ser cobrado.
 <br>
 
 [Mockup App](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20APP.pdf)  
@@ -65,17 +66,12 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
     [Grupo do Blackcard]: Matheus Pinto, Pedro Cruz, Andre Phelipe, Herbert Wander, Jack Johnson.
     [Grupo EstacIonA (Analise)]: Caicke Pinheiro, Andreangelo Patuzzo, Emanuel Gloria, Anne Caroline.
 
-#### 5.2 DECISÕES DE PROJETO
-    Campo CNPJ: em nosso projeto optamos por uma pessoa Juridica cadastrar o CPNJ da empresa e pessoa fisica
-    cadastrar o CPF para uso pessoal.
-    Pois utilizando essa decisão podemos poupar de criar uma nova tabela para outro problema.
-    
-    Campo preço_vaga: em nosso projeto decidimos o preço da vaga por hora estacionada, assim o aplicativo calcula quanto tempo
-    o cliente ficou com o preço de cada vaga.
-    Pois esse método é mais utilizado em estacionamentos privados.
-    
-    Campo Tipo Sensor: em nosso projeto optamos também por RETIRAR o atributo tipo sensor e criamos uma tabela tipo sensor
-    Pois com esse método resolveriamos o problema de adicionar novos tipos de sensores.
+#### 5.2 DECISÕES DE PROJETO    
+    Dos preços e taxas: Decidimos que cada estacionamento poderá cobrar um preço diferenciado na primeira hora em relação as demais, por exemplo: primeira hora: R$7,00, demais horas: R$2,00
+    Da autenticação e autorização: será feita por outro sistema isolado que terá sua própria base de dados, por isso campos como "login" e "senha" não serão armazenados neste banco.
+    Do campo varchar: 
+     1 - Optamos por não utilizarmos um limitador no campo varchar (Ex: varchar(45)), tendo consciência que este limitador é uma questão de boas práticas, porém sabemos também que, como utilizaremos Postgres neste caso o banco cuida de armazenar somente os byts utilizados, sendo assim não disperdiça recursos, que para este momento seria mais interessante, visto que ainda estamos passando por fortes alterações de estrutura do banco e esta flexibilidade diminui consideravelmente o retrabalho constante. Informação encontrada em: [Postgres documentation](https://www.postgresql.org/docs/9.3/static/datatype-character.html)
+     2 - Campos como CPF, CNH, número do cartão e similares consideramos que o formato destes dados serão tratados no front-end, enviando para o banco o padrão correto, por isso, decidimos manter o tipo varchar para os mesmos. Não colocamos integer ou outro tipo numérico visto que estes dados são apenas identificadores e não quantitativos, além de serem campos muito grandes o que necessitaria de mais recurso de aramzenamento. 
     
 
 >## Marco de Entrega 02 em: (11/05/2018)<br>
