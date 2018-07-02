@@ -1,7 +1,7 @@
 /* Logico_top: */
 
 CREATE TABLE ESTACIONAMENTO (
-    id INTEGER PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     FK_ENDERECO_id SERIAL,
     nome VARCHAR,
     primira_hora MONEY,
@@ -9,8 +9,8 @@ CREATE TABLE ESTACIONAMENTO (
 );
 
 CREATE TABLE VAGA (
-    id SERIAL PRIMARY KEY UNIQUE,
-    FK_ESTACIONAMENTO_id INTEGER,
+    id SERIAL PRIMARY KEY,
+    FK_ESTACIONAMENTO_id SERIAL,
     sessao VARCHAR,
     numero INTEGER,
     andar INTEGER
@@ -20,44 +20,41 @@ CREATE TABLE CLIENTE (
     id SERIAL PRIMARY KEY,
     nome VARCHAR,
     email VARCHAR,
-    cpf INTEGER,
-    cnh INTEGER,
-    telefone INTEGER,
+    cpf VARCHAR,
+    cnh VARCHAR,
+    telefone VARCAHR,
     saldo MONEY,
-    UNIQUE (id, email, cpf, cnh)
+    UNIQUE (email, cpf, cnh, telefone)
 );
 
 CREATE TABLE SENSOR (
     id SERIAL PRIMARY KEY,
     FK_VAGAS_id SERIAL,
     FK_TIPO_SENSOR_id SERIAL,
-    nome VARCHAR,
-    descricao VARCHAR,
-    UNIQUE (id, nome)
+    nome VARCHAR UNIQUE,
+    descricao TEXT
 );
 
 CREATE TABLE TIPO_SENSOR (
     id SERIAL PRIMARY KEY,
-    tipo VARCHAR,
-    UNIQUE (id, tipo)
+    tipo VARCHAR UNIQUE
 );
 
 CREATE TABLE STATUS_RESERVA (
     id SERIAL PRIMARY KEY,
-    status VARCHAR,
-    UNIQUE (id, status)
+    status VARCHAR UNIQUE
 );
 
 CREATE TABLE CARTAO (
-    id SERIAL PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     FK_CLIENTE_id SERIAL,
-    numero INTEGER,
-    validade VARCHAR,
+    numero VARCHAR,
+    validade DATE,
     nome_impresso VARCHAR
 );
 
 CREATE TABLE VEICULO (
-    id SERIAL PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     FK_CLIENTE_id SERIAL,
     FK_CATEGORIA_VEICULO_id SERIAL,
     placa VARCHAR
@@ -65,18 +62,17 @@ CREATE TABLE VEICULO (
 
 CREATE TABLE CATEGORIA_VEICULO (
     id SERIAL PRIMARY KEY,
-    categoria VARCHAR,
-    UNIQUE (id, categoria)
+    categoria VARCHAR UNIQUE,
+    descricao TEXT
 );
 
 CREATE TABLE METODO_PAGAMENTO (
     id SERIAL PRIMARY KEY,
-    metodo VARCHAR,
-    UNIQUE (id, metodo)
+    metodo VARCHAR UNIQUE
 );
 
 CREATE TABLE RESERVA (
-    id SERIAL PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     FK_CLIENTE_id SERIAL,
     FK_VAGAS_id SERIAL,
     FK_STATUS_RESERVA_id SERIAL,
@@ -86,9 +82,9 @@ CREATE TABLE RESERVA (
 );
 
 CREATE TABLE PAGAMENTO (
-    id SERIAL PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     FK_CLIENTE_id SERIAL,
-    FK_ESTACIONAMENTO_id INTEGER,
+    FK_ESTACIONAMENTO_id SERIAL,
     FK_METODO_PAGAMENTO_id SERIAL,
     valor MONEY,
     data DATE,
@@ -96,7 +92,7 @@ CREATE TABLE PAGAMENTO (
 );
 
 CREATE TABLE ENDERECO (
-    id SERIAL PRIMARY KEY UNIQUE,
+    id SERIAL PRIMARY KEY,
     estado VARCHAR,
     cidade VARCHAR,
     bairro VARCHAR,
