@@ -84,26 +84,15 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
     id_vaga: Campo que contem o ID de armazenamento da vaga.
     secao_vaga : Campo que contem codigo de seção onde a vaga está localizada.
     andar_vaga : Campo com o numero do andar referente a vaga.
-    estado_vaga :Campo que contem o estado onde a vaga está localizada.
-    cidade_vaga: Campo que contem a cidade onde a vaga está localizada.
-    cep_vaga:Campo que contem o numero do CEP referente a localização da vaga.
-    horario_reserva:Campo que contem o horario exato do momento que foi reservado a vaga.
-    preco_vaga:Campo com o preço a ser pago por reserva da vaga.
-    Empresa : Tabela que armazena as informações da empresa que é responsavel por uma vaga.
-    cnpj_empresa: Campo que contem o numero de cadastro nacional de pessoa juridica para cada empresa.
-    empresa_resp: Campo que contem o nome da empresa responsável por fornecimento da vaga.
-    Administrador: Tabela que armazena dados referentes ao administrador.
-    nome: Campo onde armazena o nome do administrador.
-    email: Campo que armazena o email do administrador.
-    id_administrador: Campo onde armazena o id referente ao administrador.
     Pagamento: Tabela que armazena os dados referentes aos pagamentos.
     metodo: Campo onde armazena a forma de pagamento escolhida.
-    valor: Campo onde armazena o valor pago referente a vaga.
-    Condutor: Tabela onde armazena dados referentes ao condutor.
-    nome_condutor: Campo onde está armazenado o nome referente ao condutor.
-    cpf_condutor: Campo onde fica armazenado o Cadastro de Pessoa Fisica de cada condutor.
-    email_condutor: Campo onde é armazenado o email de cada condutor.
-    tel_condutor: Campo onde fica armazenado o telefone do condutor.
+    cliente: Tabela onde armazena dados referentes ao cliente.
+    nome: Campo onde está armazenado o nome referente ao cliente.
+    cpf: Campo onde fica armazenado o Cadastro de Pessoa Fisica de cada cliente.
+    email: Campo onde é armazenado o email de cada ccliente.
+    tel: Campo onde fica armazenado o telefone do cliente.
+    cnh:Campo com numero do CNH do cliente.
+    saldo: Campo referente ao saldo do cliente
     Sensor: Tabela onde se armazena dados referentes a utilização dos sensores.
     idSensor: Codigo de cadastro do sensor.
     situação: Campo que armazena a situação do sensor, sendo ela desligada ou ligada.
