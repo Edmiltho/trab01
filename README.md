@@ -25,12 +25,12 @@ Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesm
 ### 3.MINI-MUNDO <br>
 
 > 
-#####O Sistema proposto ao usuário apresenta as seguintes informações: 
+##### O Sistema proposto ao usuário apresenta as seguintes informações: 
 * Do cliente serão armazenados o nome, e-mail, CPF, Número da CNH, telefone, saldo no aplicativo, quais veículos possui bem como seus cartões de crédito. 
 * Das formas de pagamentos teremos as seguintes opções:
- 1. Cartão de crédito: onde serão armazenados numero de cartão, data de vencimento, nome impresso no cartão, 
- 2. Créditos no aplicativo: neste caso um valor em reais é adicionado a conta do cliente. 
- 3. Paypal: neste caso o cliente é redirecionado para um sistema externo que possui todos os dados do mesmo, não sendo necessário o armazenamento dessas informações aqui.
+  1. Cartão de crédito: onde serão armazenados numero de cartão, data de vencimento, nome impresso no cartão, 
+  2. Créditos no aplicativo: neste caso um valor em reais é adicionado a conta do cliente. 
+  3. Paypal: neste caso o cliente é redirecionado para um sistema externo que possui todos os dados do mesmo, não sendo necessário o armazenamento dessas informações aqui.
 * Do veículo deseja-se saber a placa e sua categoria para que possamos localizar uma vaga conveniente de acordo com o porte do mesmo.
 * Dos estacionamentos deseja-se saber o nome do mesmo, o valor da primeira hora e das demais horas e seu endereço além de, claro, quais vagas pertencem a ele.
 * Das vagas deseja-se armazenar o número, sessão e andar da mesma para que torne fácil sua localização, além desses precisamos saber também quais sensores estão sendo utilizados em cada vaga.
