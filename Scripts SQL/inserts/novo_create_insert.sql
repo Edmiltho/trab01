@@ -50,7 +50,7 @@ CREATE TABLE CARTAO (
     id SERIAL PRIMARY KEY ,
     FK_CLIENTE_id SERIAL,
     numero VARCHAR,
-    validade VARCHAR,
+    validade date,
     nome_impresso VARCHAR
 );
 
