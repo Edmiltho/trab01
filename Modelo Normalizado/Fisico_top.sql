@@ -22,7 +22,7 @@ CREATE TABLE CLIENTE (
     email VARCHAR,
     cpf VARCHAR,
     cnh VARCHAR,
-    telefone VARCAHR,
+    telefone VARCHAR,
     saldo MONEY,
     UNIQUE (email, cpf, cnh, telefone)
 );
