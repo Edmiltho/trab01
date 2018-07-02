@@ -126,7 +126,7 @@ OBS: Os mockup's podem estar desatualizado devido a mudanças que ocorreram dura
 [Script de criação e inserção - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/inserts/novo_create_insert.sql)
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-[Script de criação e inserção e drop de tabelas - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/Jun%C3%A7%C3%A3o%20Create%20e%20Insert%20e%20Drop.sql)
+[Script de criação e inserção e drop de tabelas - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/drop_create_insert.sql)
 Foi usado o comando DROP nas tabelas gerencia e paga.
 
 >## Marco de Entrega 03 em: (adiada)<br>
@@ -136,43 +136,55 @@ Foi usado o comando DROP nas tabelas gerencia e paga.
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
     SELECT * FROM cartao;
 
-![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/cart%C3%A3o.png)
+![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/cartao.png)
 
     SELECT * FROM categoria_veiculo
 
-![Consulta categoria_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/categoria_veiculo.png)
+![Consulta categoria_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/categoria_veiculo.png)
 
-    SELECT * FROM gerencia;
+    SELECT * FROM endereco;
 
-![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/gerencia.png)
+![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/endereco.png)
 
-    SELECT * FROM paga;
+    SELECT * FROM pagamento;
 
-![Consulta paga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/paga.png)
+![Consulta pagamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/pagamento.png)
 
-    SELECT * FROM pessoa;
+    SELECT * FROM cliente;
 
-![Consulta pessoa - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/pessoa.png)
+![Consulta cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/cliente.png)
 
-    SELECT * FROM reserva_vaga;
+    SELECT * FROM reserva;
 
-![Consulta reserva_vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/reserva_vaga.png)
+![Consulta reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/reserva.png)
 
     SELECT * FROM sensor;
 
-![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/sensor.png)
+![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/sensor.png)
 
     SELECT * FROM tipo_sensor;
 
-![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/tipo_sensor.png)
+![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/tipo_sensor.png)
 
     SELECT * FROM vaga;
 
-![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/vaga.png)
+![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/vaga.png)
 
     SELECT * FROM veiculo;
 
-![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/veiculo.png)
+![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/veiculo.png)
+
+    SELECT * FROM estacionamento;
+
+![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/estacionamento.png)
+
+    SELECT * FROM metodo_pagamento;
+
+![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/metodo_pagamento.png)
+
+    SELECT * FROM status_reserva;
+
+![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/status_reserva.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
     SELECT nome, email, perfil
