@@ -19,16 +19,25 @@ Foi feito um clone desse projeto pois os dois grupos estão desenvolvendo o mesm
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 
 > A empresa "OriginsIA Soluções Tecnologicas" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para se encontrar vagas em em grandes cidades e grandes centros, ficamos motivados com o desenvolvimento deste sistema "estacIonA". O Sistema "estacIonA" tem como objetivo trazer facilidade e agilizade daqueles que precisam estacionar seus carros em locais cuja as vagas são escassas. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos estacionamentos, além de também armazenar dados sobre as vagas e as informações dos usuarios. 
-
 > O sistema irá utilizar sensores de presença para saber onde uma vaga está disponível e com a ajuda de câmeras verificará se o carro na vaga é a da pessoa que a reservou. Todo o sistema de reserva e pagamento será feito por um aplicativo que utilizando o sensor de gps mostrará um mapa em tempo real do local onde se encontra o carro e o guiará até a vaga correta. <br>
  
 
-### 3.MINI-MUNDO Novo<br>
+### 3.MINI-MUNDO <br>
 
 > 
-O Sistema proposto ao usuário apresenta as seguintes informações .Do cliente serão armazenados o nome,e-mail, CPF, Número da CNH, telefone, além de qual veículo possui.Das formas de pagamentos serão armazenados numero de cartão de crédito, data de vencimento, nome impresso no cartão, além dos créditos depositados. O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de vaga em um estacionamento caso esta já não tenha sido reservado, escolhendo assim o método de pagamento mais apropriado e fetuando o pagamento do valor referente aquele estacionamento informado pelo próprio aplicativo.
-O sistema proposto ao administrador apresenta as seguintes informações: Da empresa será armazenada o nome,e-mail e CNPJ, Dos estacionamentos serão armazenados o Local e código das vagas, o administrador poderá adicionar o remover qualquer estacionamento e alterar o numero de vagas a qualquer momento, deste armzenaremos nome, email e CPF.
+O Sistema proposto ao usuário apresenta as seguintes informações: 
+* Do cliente serão armazenados o nome, e-mail, CPF, Número da CNH, telefone, saldo no aplicativo, quais veículos possui bem como seus cartões de crédito. 
+* Das formas de pagamentos teremos as seguintes opções:
+1. Cartão de crédito: onde serão armazenados numero de cartão, data de vencimento, nome impresso no cartão, 
+2. Créditos no aplicativo: neste caso um valor em reais é adicionado a conta do cliente. 
+3. Paypal: neste caso o cliente é redirecionado para um sistema externo que possui todos os dados do mesmo, não sendo necessário o armazenamento dessas informações aqui.
+* Do veículo deseja-se saber a placa e sua categoria para que possamos localizar uma vaga conveniente de acordo com o porte do mesmo.
+* Dos estacionamentos deseja-se saber o nome do mesmo, o valor da primeira hora e das demais horas e seu endereço além de, claro, quais vagas pertencem a ele.
+* Das vagas deseja-se armazenar o número, sessão e andar da mesma para que torne fácil sua localização, além desses precisamos saber também quais sensores estão sendo utilizados em cada vaga.
+* Dos sensores apenas um nome, uma breve descrição pode ser interessante e o tipo é do que precisamos saber, ex.: nome:Sensor-A1 descrição:lado-esquerdo tipo:câmera.
 Do período estacionado: o sistema registrá via reserva o horario de entrada do veículo, o que será confirmado via sensores nas vagas, e detectará automaticamente a saída do mesmo, calculando automaticamente o valor a ser cobrado.
+O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de vaga em um estacionamento caso esta já não tenha sido reservado, escolhendo assim o método de pagamento mais apropriado, ao sair da vaga o sistema lhe permite que efetue o pagamento do valor referente ao periodo em que ficou estacionado naquele local.
+
 <br>
 
 [Mockup App](https://github.com/GrupoDaVaga/trab01/blob/david/mockups/ESTACIONA%20APP.pdf)  
@@ -37,11 +46,11 @@ Do período estacionado: o sistema registrá via reserva o horario de entrada do
 OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram durante o projeto após a licensa do mesmo ter expirado, e como podem ver nesta [imagem](https://github.com/GrupoDaVaga/trab01/blob/master/mockups/balsamiq.png), a licença gratuita não permite edições nos mockups após 30 dias de uso
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
-[Tabela_de_dados_estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA%20(1).xlsx)
+[Tabela de dados estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA%20(3).xlsx)
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?<br>
-   > O sistema fornecerá relatórios sobre a vaga que foi reservada e as informações do cliente, da empresa responsável pela vaga, da reserva (preço, data) e do veículo do cliente. Os principais relatórios obtidos são: <br><br>
+   > O sistema fornecerá relatórios sobre a vaga que foi reservada e as informações do cliente, da empresa responsável pela vaga, da reserva (preço, data) e do veículo do cliente. Os principais relatórios obtidos serão: <br><br>
    - Vagas disponíveis;<br>
    - Relatório sobre determinada vaga;<br>
    - Relatório sobre a reserva da vaga;<br>
@@ -49,7 +58,6 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
    - Histórico de reservas de determinado cliente;<br>
    - Créditos restantes de um determinado cliente;<br>
    - Relatório da empresa responsável pela vaga;<br>
-   - Relatório do administrador da empresa responsável;<br>
    - Relatório sobre o veículo de determinada reserva;<br>
    - Histórico de veículos estacionados em determinada vaga.
     
