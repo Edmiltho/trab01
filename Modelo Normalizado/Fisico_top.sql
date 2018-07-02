@@ -1,4 +1,4 @@
-/* Logico_top: */
+/* Fisico_top: */
 
 CREATE TABLE ESTACIONAMENTO (
     id SERIAL PRIMARY KEY,
@@ -31,7 +31,7 @@ CREATE TABLE SENSOR (
     id SERIAL PRIMARY KEY,
     FK_VAGAS_id SERIAL,
     FK_TIPO_SENSOR_id SERIAL,
-    nome VARCHAR UNIQUE,
+    nome VARCHAR,
     descricao TEXT
 );
 
