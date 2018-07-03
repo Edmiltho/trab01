@@ -115,6 +115,9 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
     metodo_pagamento: Tabela com dados a respeito do tipo de pagamento.
     metodo : Campo onde fica armazenado o metodo escolhido
+    categoria_veiculo: Tabela onde fica armazenada dados referentes aos veiculos.
+    categoria: Tipo do veiculo, carro, moto entre outros
+    Descrição: Campo onde fica armazenado o tipo do veiculo
 
 
 
