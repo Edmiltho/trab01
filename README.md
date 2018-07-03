@@ -549,12 +549,12 @@ where extract(year from PG."data") = 2018
 ```sql
 select estacionamento.nome, sum(vaga.id) as qtd_vagas from estacionamento join vaga on (estacionamento.id = vaga.fk_estacionamento_id) group by estacionamento.nome order by qtd_vagas desc
 ```
-![join1](link)
+![join1](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/join1.png)
 
 ```sql
 select distinct sensor.nome, tipo_sensor.tipo from sensor join tipo_sensor on (tipo_sensor.id = sensor.fk_tipo_sensor_id) order by sensor.nome asc
 ```
-![join2](link)
+![join2](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/join2.png)
 
 ```sql
 select cliente.nome, estacionamento.nome, vaga.sessao, vaga.numero, vaga.andar, reserva."data" from estacionamento 
@@ -562,21 +562,21 @@ join vaga on (estacionamento.id = vaga.fk_estacionamento_id)
 join reserva on (reserva.fk_vagas_id = vaga.id)
 join cliente on (cliente.id = reserva.fk_cliente_id) order by reserva."data" desc;
 ```
-![join3](link)
+![join3](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/join3.png)
 
 ```sql
 select veiculo.placa, categoria_veiculo.categoria from veiculo 
 join categoria_veiculo on (veiculo.fk_categoria_veiculo_id = categoria_veiculo.id) 
 order by categoria_veiculo.categoria;
 ```
-![join4](link)
+![join4](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/join4.png)
 
 ```sql
 select cliente.nome, cartao.numero as cartao from cliente 
 join cartao on (cliente.id = cartao.fk_cliente_id) 
 order by cliente.nome asc;
 ```
-![join5](link)
+![join5](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/join5.png)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
