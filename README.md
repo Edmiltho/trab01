@@ -480,9 +480,9 @@ Updates:<br>
          join vaga as VAG on (VAG.id = RES.fk_vagas_id)
          join sensor as SENS on (SENS.fk_vagas_id = VAG.id)
          join tipo_sensor as TIP_SENS on (TIP_SENS.id = SENS.fk_tipo_sensor_id)
-         join estacionamento as ESTAC on (ESTAC.id = VAG.fk_estacionamento_id and ESTAC.id = PG.fk_estacionamento_id)
+         join estacionamento as ESTAC on (ESTAC.id = VAG.fk_estacionamento_idwhere extract(year from RES."data") = 2018 and ESTAC.id = PG.fk_estacionamento_id)
          join endereco as ENDE on (ENDE.id = ESTAC.fk_endereco_id)
-         where extract(year from RES."data") = 2018
+         where extract(year from PG."data") = 2018
 
 
 ![join_todas as tableas](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/alljoin.png)
