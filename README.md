@@ -465,19 +465,27 @@ Updates:<br>
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
-         **Junção de todas as tabelas:**
-         join veiculo as VEIC on (CLI.id = VEIC.fk_cliente_id)
-        join categoria_veiculo as CAT on (CAT.id = VEIC.fk_categoria_veiculo_id)
-        join reserva as RES on (RES.fk_cliente_id = CLI.id)
-        join status_reserva as STAT_RES on (STAT_RES.id = RES.fk_status_reserva_id)
-        join vaga as VAG on (VAG.id = RES.fk_vagas_id)
-        join sensor as SENS on (SENS.fk_vagas_id = VAG.id)
-        join tipo_sensor as TIP_SENS on (TIP_SENS.id = SENS.fk_tipo_sensor_id)
-        join estacionamento as ESTAC on (ESTAC.id = VAG.fk_estacionamento_id and ESTAC.id = PG.fk_estacionamento_id)
-        join endereco as ENDE on (ENDE.id = ESTAC.fk_endereco_id)
-        where extract(year from RES."data") = 2018
+**Junção de todas as tabelas:**
 
-![todas as tableas](link)
+         select distinct CLI.nome, CLI.saldo, MP.metodo, PG."data" as "data_pg",
+         extract(hour from (hora_saida - hora_entrada)) as "duracao(hrs)",ESTAC.nome as estacionamento, ENDE.cep,
+         (((((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) -1 )* val_hora) + primira_hora) as custo_total  from metodo_pagamento as MP 
+         join pagamento as PG on (MP.id = PG.fk_metodo_pagamento_id) 
+         join cliente as CLI on (CLI.id = PG.fk_cliente_id) 
+         join cartao as CART on (CART.fk_cliente_id = CLI.id)
+         join veiculo as VEIC on (CLI.id = VEIC.fk_cliente_id)
+         join categoria_veiculo as CAT on (CAT.id = VEIC.fk_categoria_veiculo_id)
+         join reserva as RES on (RES.fk_cliente_id = CLI.id)
+         join status_reserva as STAT_RES on (STAT_RES.id = RES.fk_status_reserva_id)
+         join vaga as VAG on (VAG.id = RES.fk_vagas_id)
+         join sensor as SENS on (SENS.fk_vagas_id = VAG.id)
+         join tipo_sensor as TIP_SENS on (TIP_SENS.id = SENS.fk_tipo_sensor_id)
+         join estacionamento as ESTAC on (ESTAC.id = VAG.fk_estacionamento_id and ESTAC.id = PG.fk_estacionamento_id)
+         join endereco as ENDE on (ENDE.id = ESTAC.fk_endereco_id)
+         where extract(year from RES."data") = 2018
+
+
+![join_todas as tableas](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C6/alljoin.png)
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
 
