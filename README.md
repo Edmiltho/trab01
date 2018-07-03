@@ -115,6 +115,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
     metodo_pagamento: Tabela com dados a respeito do tipo de pagamento.
     metodo : Campo onde fica armazenado o metodo escolhido
+    status_reserva: Campo onde fica armazenado dados referente ao estado da vaga. 
 
 
 
