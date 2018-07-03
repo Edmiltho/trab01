@@ -107,13 +107,17 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     estacionamento: Tabela onde fica armazenado dados referentes a reserva feita pelo usuario.
     nome: Campo onde se armazena nome referente a reserva.
     primeira_hora: Campo onde se armazena a hora que o veiculo entrou em sua vaga.
-    val_hora: Campo onde fica armazenado o horario que o veiculo saiu do estacionamento.
+    val_hora: Campo onde fica armazenado o valor/hora.
     cartão: Tabela onde fica armazenados dados referentes ao cartão do cliente.
     validade:Campo com dados referente a data de validade do cartão do cliente
     nome_impressão: Campo com dados referente ao nome do cliente no cartão.
     numero: Campo que armazena o numero do cartão do cliente.
     endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
-    
+    metodo_pagamento: Tabela com dados a respeito do tipo de pagamento.
+    metodo : Campo onde fica armazenado o metodo escolhido
+    categoria_veiculo: Tabela onde fica armazenada dados referentes aos veiculos.
+    categoria: Tipo do veiculo, carro, moto entre outros
+    Descrição: Campo onde fica armazenado o tipo do veiculo
 
 
 
@@ -226,8 +230,8 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 ![Consulta aritmetica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%201.png)
 
-    SELECT fk_cliente_id, fk_vagas_id, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
-    (((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora) as custo_total
+    SELECT fk_cliente_id as id_cliente, fk_vagas_id as id_vaga, hora_entrada, hora_saida, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
+    (((((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) -1 )* val_hora) + primira_hora) as custo_total
     FROM  reserva
     INNER JOIN estacionamento
     on (reserva.fk_vagas_id = estacionamento.id)
@@ -367,6 +371,96 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+    DELETE FROM sensor WHERE id = 4;
+<br>Antes<br>
+![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
+<br>Depois<br>
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png) <br>
+
+    DELETE FROM veiculo WHERE placa = 'LAQ1099';
+<br> Antes <br>
+![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
+<br>Depois<br>
+![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png) <br>
+
+    DELETE FROM veiculo where fk_cliente_id = 8
+<br> Antes <br>
+![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
+<br>Depois<br>
+![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png) <br>
+
+    DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
+<br> Antes <br>
+![Delete Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva.png)
+<br>Depois<br>
+![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva2.png) <br>
+
+    DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
+<br> Antes <br>
+![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
+<br>Depois<br>
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png) <br>
+
+    DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
+<br> Antes <br>
+![Delete Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
+<br>Depois<br>
+![Consulta Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao4.png) <br>
+
+Updates:<br>
+
+    UPDATE cliente SET telefone = '45848454'
+    WHERE nome = 'David' and cpf = '48961067095';
+<br> Antes <br>
+![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente1.png)
+<br>Depois<br>
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente2.png)
+<br>
+
+    UPDATE cartao SET nome_impresso = 'Thiago'
+    WHERE fk_cliente_id = 8 ;
+<br> Antes <br>
+![Update Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp1.png)
+<br>Depois<br>
+![Consulta Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp2.png)
+<br>
+
+    UPDATE veiculo SET placa = 'AVC-2134', fk_categoria_veiculo_id = 4
+    WHERE placa = 'LAQ1099';
+<br> Antes <br>
+![Update Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp.png)
+<br>Depois<br>
+![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp2.png)
+<br>
+
+
+    UPDATE reserva SET hora_entrada = '15:00:00', hora_saida = '17:30:00'
+    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+<br> Antes <br>
+![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp.png)
+<br>Depois<br>
+![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp2.png)
+<br>
+
+
+    UPDATE reserva SET hora_entrada = '11:00:00', hora_saida = '17:30:00', data = '2017-09-06'
+    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+<br> Antes <br>
+![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp3.png)
+<br>Depois<br>
+![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp4.png)
+<br>
+
+
+    UPDATE cliente SET telefone = '11126574855', email = 'tad_sfg@gmail.com', saldo = 50.00, nome = 'Thiago Alves'
+    WHERE nome = 'Thiago' and cpf = '73948820040';
+<br> Antes <br>
+![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente3.png)
+<br>Depois<br>
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente4.png)
+<br>
+
+
 
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
@@ -385,11 +479,59 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 ![todas as tableas](link)
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+
+
+    select * from cliente order by nome ASC ;
+
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/clienteOR.png) <br>
+
+    select * from endereco order by cep DESC ;
+
+![Consulta Endereço - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/enderecoOR.png) <br>
+
+    select sessao,count(sessao) from vaga group by sessao order by  sessao asc
+
+![Consulta Endereço - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by%20e%20orderby.png) <br>
+
+
+    select nome_impresso,count(nome_impresso) from cartao group by nome_impresso order by  nome_impresso desc
+
+![Consulta Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by%204.png) <br>
+
+    select cep,rua,cidade,endereco.id,nome from endereco,estacionamento where estacionamento.fk_endereco_id = endereco.id group by endereco.id,nome ;
+
+![Consulta Endereço, Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by1.png) <br>
+
+
+    select cliente.nome,fk_VAGAS_id,data,estacionamento.nome,hora_entrada,hora_saida from cliente,reserva,vaga,estacionamento where cliente.id = reserva.fk_cliente_id and reserva.fk_vagas_id = vaga.id group by cliente.nome,estacionamento.nome,fk_VAGAS_id,data,hora_entrada,hora_saida  ;
+
+![Consulta Cliente, Reserva, Vaga, Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by2.png) <br>
+
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+
+    select * from estacionamento where fk_endereco_id = (select id from endereco where cep = '29101913')
+
+![Consulta Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta1.png) <br>
+
+
+
+    select * from vaga where fk_estacionamento_id = (select id from endereco where cep = '29101913')
+
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta12.png) <br>
+
+
+
+    select * from endereco where cep = (select cep from endereco where cep = '29101913')
+
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta123.png) <br>
+
+
+
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
@@ -405,6 +547,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
         d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
         
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
+        As principais dificuldades encontradas pelo grupo foram a esquematização do modelo conceitual, e entender melhor como fazer             diversos selects e principalmente aprender a ordem da utilização de cada função respeitando suas hierarquia.
 >## Marco de Entrega Final em: (25/06/2018)<br>
         
 ### 14  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
