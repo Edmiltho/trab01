@@ -369,7 +369,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
     DELETE FROM sensor WHERE id = 4;
-Antes
+<br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
 <br>Depois<br>
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
