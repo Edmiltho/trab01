@@ -501,6 +501,26 @@ Updates:<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+
+    select * from estacionamento where fk_endereco_id = (select id from endereco where cep = '29101913')
+
+![Consulta Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta1.png) <br>
+
+
+
+    select * from vaga where fk_estacionamento_id = (select id from endereco where cep = '29101913')
+
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta12.png) <br>
+
+
+
+    select * from endereco where cep = (select cep from endereco where cep = '29101913')
+
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta123.png) <br>
+
+
+
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
