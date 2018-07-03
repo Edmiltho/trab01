@@ -644,13 +644,13 @@ select sensor.nome as "sensor" from sensor left join vaga on (vaga.id = sensor.f
 /*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
 select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
 ```
-![selfjoin](link)
+![selfjoin](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/selfjoin.png)
 
 ```sql
 create or replace temporary view view_cliente as select nome, email, telefone from cliente;
 select * from view_cliente;
 ```
-![view1](link)
+![view1](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/view1.png)
 
 ```sql
 create or replace temporary view view_estacionamento as 
@@ -658,14 +658,14 @@ select estacionamento.nome, endereco.pais, endereco.estado, endereco.cep, endere
 from estacionamento join endereco on estacionamento.fk_endereco_id = endereco.id;
 select * from view_estacionamento;;
 ```
-![view2](link)
+![view2](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/view2.png)
 
 ```sql
 create or replace temporary view view_vaga as 
 select vaga.id as "id_vaga", count(sensor.id) as "qtd sensor" from vaga join sensor on vaga.id = sensor.fk_vagas_id group by vaga.id order by vaga.id;
 select * from view_vaga;
 ```
-![view3](link)
+![view3](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/view3.png)
 
 ```sql
 create or replace temporary view view_veic_A as 
@@ -674,14 +674,14 @@ from veiculo join categoria_veiculo on categoria_veiculo.id = veiculo.fk_categor
 where categoria_veiculo.categoria = 'A';
 select * from view_veic_A;
 ```
-![view4](link)
+![view4](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/view4.png)
 
 ```sql
 create or replace temporary view view_reserva_ativa as 
 select data, hora_entrada, hora_saida from reserva where reserva.fk_status_reserva_id = 1;
 select * from view_reserva_ativa;
 ```
-![view5](link)
+![view5](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C9/view5.png)
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
