@@ -371,8 +371,19 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
-        a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
-        b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+         **Junção de todas as tabelas:**
+         join veiculo as VEIC on (CLI.id = VEIC.fk_cliente_id)
+        join categoria_veiculo as CAT on (CAT.id = VEIC.fk_categoria_veiculo_id)
+        join reserva as RES on (RES.fk_cliente_id = CLI.id)
+        join status_reserva as STAT_RES on (STAT_RES.id = RES.fk_status_reserva_id)
+        join vaga as VAG on (VAG.id = RES.fk_vagas_id)
+        join sensor as SENS on (SENS.fk_vagas_id = VAG.id)
+        join tipo_sensor as TIP_SENS on (TIP_SENS.id = SENS.fk_tipo_sensor_id)
+        join estacionamento as ESTAC on (ESTAC.id = VAG.fk_estacionamento_id and ESTAC.id = PG.fk_estacionamento_id)
+        join endereco as ENDE on (ENDE.id = ESTAC.fk_endereco_id)
+        where extract(year from RES."data") = 2018
+
+![todas as tableas](link)
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
