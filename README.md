@@ -367,8 +367,12 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-[Script atualização e exclusão de dados - SQL](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Atualiza%C3%A7%C3%A3o%20e%20Exclus%C3%A3o.sql)
 
+    DELETE FROM sensor WHERE id = 4;
+    Antes
+![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
+    Depois
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
