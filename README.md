@@ -45,8 +45,8 @@ O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de 
 
 OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram durante o projeto após a licensa do mesmo ter expirado, e como podem ver nesta [imagem](https://github.com/GrupoDaVaga/trab01/blob/master/mockups/balsamiq.png), a licença gratuita não permite edições nos mockups após 30 dias de uso
 
-#### 4.1 TABELA DE DADOS DO SISTEMA:
-[Tabela de dados estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA%20(3).xlsx)
+#### 4.1 TABELA DE DADOS DO SISTEMA:  
+[Tabela de dados estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA.xlsx)
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?<br>
@@ -369,9 +369,9 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
     DELETE FROM sensor WHERE id = 4;
-<br>Antes<br>
+    Antes
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
-<br>Depois<br>
+    Depois
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
