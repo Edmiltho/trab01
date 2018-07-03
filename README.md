@@ -46,7 +46,7 @@ O usuário cadastrado no aplicativo pode de qualquer lugar efetuar a reserva de 
 OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram durante o projeto após a licensa do mesmo ter expirado, e como podem ver nesta [imagem](https://github.com/GrupoDaVaga/trab01/blob/master/mockups/balsamiq.png), a licença gratuita não permite edições nos mockups após 30 dias de uso
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
-[Tabela de dados estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA.xlsx)
+[Tabela de dados estacIonA](https://github.com/GrupoDaVaga/trab01/blob/master/Planilhas/Tabela%20de%20Dados%20EstacIonA%20(3).xlsx)
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?<br>
@@ -369,47 +369,60 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     DELETE FROM sensor WHERE id = 4;
-###### Antes
+<br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
 <br>
 
+<br>
     DELETE FROM veiculo WHERE placa = 'LAQ1099';
-###### Antes
+<br>Antes<br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png)
 <br>
 
+<br>
     DELETE FROM veiculo where fk_cliente_id = 8
-###### Antes
+<br>Antes<br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png)
 <br>
 
+<br>
     DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
-###### Antes
+<br>Antes<br>
 ![Delete Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva2.png)
 <br>
 
+<br>
     DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
-###### Antes
+<br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png)
 <br>
 
+<br>
     DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
-###### Antes
+<br>Antes<br>
 ![Delete Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
-###### Depois
+<br>Depois<br>
 ![Consulta Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao4.png)
 <br>
+Updates:<br>
 
+    UPDATE cliente SET telefone = '45848454'
+    WHERE nome = 'David' and cpf = '48961067095';
+<br>Antes<br>
+![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente1.png)
+<br>Depois<br>
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente2.png)
+<br>
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
