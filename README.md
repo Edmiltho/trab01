@@ -617,25 +617,25 @@ select cliente.nome,fk_VAGAS_id,data,estacionamento.nome,hora_entrada,hora_saida
 /* TODOS OS CLIENTES QUE NUNCA FIZERAM UMA RESERVA*/
 select CLI.nome from cliente CLI left join reserva RES on (CLI.id = RES.fk_cliente_id) where RES.fk_cliente_id is null;
 ```
-![lrjoin1](link)
+![lrjoin1](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/lrjoin1.png)
 
 ```sql
 /* TODAS AS VAGAS QUE NUNCA FORAM RESERVADAS*/
 select vaga.id as vagas from vaga left join reserva RES on (vaga.id = RES.fk_vagas_id) where RES.fk_vagas_id is null;
 ```
-![lrjoin2](link)
+![lrjoin2](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/lrjoin2.png)
 
 ```sql
 /*LISTA COM TODOS OS CLIENTES E SUAS RESERVAS, CASO EXISTAM*/
 select CLI.nome, RES."data" from cliente CLI left join reserva RES on (CLI.id = RES.fk_cliente_id);
 ```
-![lrjoin3](link)
+![lrjoin3](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/lrjoin3.png)
 
 ```sql
 /*LISTA COM TODOS OS SENSORES QUE NÃO ESTAO EM NENHUMA VAGA */
 select sensor.nome as "sensor" from sensor left join vaga on (vaga.id = sensor.fk_vagas_id) where vaga.id is null;
 ```
-![lrjoin4](link)
+![lrjoin4](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/lrjoin4.png)
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
