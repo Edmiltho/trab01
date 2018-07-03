@@ -399,7 +399,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 <br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
 <br>Depois<br>
-![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png)
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
 <br>
 
     DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
