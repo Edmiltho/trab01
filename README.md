@@ -369,49 +369,44 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     DELETE FROM sensor WHERE id = 4;
-<br>Antes<br>
+###### Antes
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
 <br>
 
-<br>
     DELETE FROM veiculo WHERE placa = 'LAQ1099';
-<br>Antes<br>
+###### Antes
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png)
 <br>
 
-<br>
     DELETE FROM veiculo where fk_cliente_id = 8
-<br>Antes<br>
+###### Antes
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png)
 <br>
 
-<br>
     DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
-<br>Antes<br>
+###### Antes
 ![Delete Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva2.png)
 <br>
 
-<br>
     DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
-<br>Antes<br>
+###### Antes
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png)
 <br>
 
-<br>
     DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
-<br>Antes<br>
+###### Antes
 ![Delete Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
-<br>Depois<br>
+###### Depois
 ![Consulta Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao4.png)
 <br>
 
