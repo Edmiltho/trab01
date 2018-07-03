@@ -374,6 +374,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
 <br>
 
+<br>
     DELETE FROM veiculo WHERE placa = 'LAQ1099';
 <br>Antes<br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
@@ -381,6 +382,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png)
 <br>
 
+<br>
     DELETE FROM veiculo where fk_cliente_id = 8
 <br>Antes<br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
@@ -388,6 +390,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png)
 <br>
 
+<br>
     DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
 <br>Antes<br>
 ![Delete Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva.png)
@@ -395,13 +398,15 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva2.png)
 <br>
 
+<br>
     DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
 <br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
 <br>Depois<br>
-![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png)
 <br>
 
+<br>
     DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
 <br>Antes<br>
 ![Delete Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
@@ -435,6 +440,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
         d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
         
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
+        As principais dificuldades encontradas pelo grupo foram a esquematização do modelo conceitual, e entender melhor como fazer             diversos selects e principalmente aprender a ordem da utilização de cada função respeitando suas hierarquia.
 >## Marco de Entrega Final em: (25/06/2018)<br>
         
 ### 14  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
