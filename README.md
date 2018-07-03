@@ -647,32 +647,39 @@ select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C
 ![selfjoin](link)
 
 ```sql
-/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
-select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+create or replace temporary view view_cliente as select nome, email, telefone from cliente;
+select * from view_cliente;
 ```
 ![view1](link)
 
 ```sql
-/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
-select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+create or replace temporary view view_estacionamento as 
+select estacionamento.nome, endereco.pais, endereco.estado, endereco.cep, endereco.numero 
+from estacionamento join endereco on estacionamento.fk_endereco_id = endereco.id;
+select * from view_estacionamento;;
 ```
 ![view2](link)
 
 ```sql
-/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
-select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+create or replace temporary view view_vaga as 
+select vaga.id as "id_vaga", count(sensor.id) as "qtd sensor" from vaga join sensor on vaga.id = sensor.fk_vagas_id group by vaga.id order by vaga.id;
+select * from view_vaga;
 ```
 ![view3](link)
 
 ```sql
-/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
-select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+create or replace temporary view view_veic_A as 
+select veiculo.placa, categoria_veiculo.categoria, categoria_veiculo.descricao 
+from veiculo join categoria_veiculo on categoria_veiculo.id = veiculo.fk_categoria_veiculo_id 
+where categoria_veiculo.categoria = 'A';
+select * from view_veic_A;
 ```
 ![view4](link)
 
 ```sql
-/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
-select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+create or replace temporary view view_reserva_ativa as 
+select data, hora_entrada, hora_saida from reserva where reserva.fk_status_reserva_id = 1;
+select * from view_reserva_ativa;
 ```
 ![view5](link)
 
