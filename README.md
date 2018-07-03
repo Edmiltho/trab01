@@ -115,7 +115,6 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
     metodo_pagamento: Tabela com dados a respeito do tipo de pagamento.
     metodo : Campo onde fica armazenado o metodo escolhido
-    status_reserva: Campo onde fica armazenado dados referente ao estado da vaga. 
 
 
 
@@ -414,6 +413,51 @@ Updates:<br>
 <br>Depois<br>
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente2.png)
 <br>
+
+    UPDATE cartao SET nome_impresso = 'Thiago'
+    WHERE fk_cliente_id = 8 ;
+<br> Antes <br>
+![Update Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp1.png)
+<br>Depois<br>
+![Consulta Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp2.png)
+<br>
+
+    UPDATE veiculo SET placa = 'AVC-2134', fk_categoria_veiculo_id = 4
+    WHERE placa = 'LAQ1099';
+<br> Antes <br>
+![Update Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp.png)
+<br>Depois<br>
+![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp2.png)
+<br>
+
+
+    UPDATE reserva SET hora_entrada = '15:00:00', hora_saida = '17:30:00'
+    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+<br> Antes <br>
+![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp.png)
+<br>Depois<br>
+![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp2.png)
+<br>
+
+
+    UPDATE reserva SET hora_entrada = '11:00:00', hora_saida = '17:30:00', data = '2017-09-06'
+    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+<br> Antes <br>
+![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp3.png)
+<br>Depois<br>
+![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp4.png)
+<br>
+
+
+    UPDATE cliente SET telefone = '11126574855', email = 'tad_sfg@gmail.com', saldo = 50.00, nome = 'Thiago Alves'
+    WHERE nome = 'Thiago' and cpf = '73948820040';
+<br> Antes <br>
+![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente3.png)
+<br>Depois<br>
+![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente4.png)
+<br>
+
+
 
 >## Marco de Entrega 04 em: (08/06/2017)<br>
 
