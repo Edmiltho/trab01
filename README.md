@@ -113,7 +113,8 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     nome_impressão: Campo com dados referente ao nome do cliente no cartão.
     numero: Campo que armazena o numero do cartão do cliente.
     endereco: Tabela com dados do endereço em relação a vaga de estacionamento, que decidimos não adicionar para simplificar o projeto.
-    
+    metodo_pagamento: Tabela com dados a respeito do tipo de pagamento.
+    metodo : Campo onde fica armazenado o metodo escolhido
 
 
 
