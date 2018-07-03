@@ -640,6 +640,42 @@ select sensor.nome as "sensor" from sensor left join vaga on (vaga.id = sensor.f
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![selfjoin](link)
+
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![view1](link)
+
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![view2](link)
+
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![view3](link)
+
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![view4](link)
+
+```sql
+/*SELF JOIN - TODOS OS CLIENTES QUE TENHAM O MESMO SALDO */
+select c1.nome, c2.nome, c1.saldo from cliente C1 join cliente C2 on (C1.id <> C2.id and C1.saldo = C2.saldo);
+```
+![view5](link)
+
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
 ```sql
