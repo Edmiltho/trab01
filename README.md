@@ -580,31 +580,35 @@ order by cliente.nome asc;
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
-
-    select * from cliente order by nome ASC ;
-
+```sql
+select * from cliente order by nome ASC ;
+```
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/clienteOR.png) <br>
 
-    select * from endereco order by cep DESC ;
-
+```sql
+select * from endereco order by cep DESC ;
+```
 ![Consulta Endereço - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/enderecoOR.png) <br>
 
-    select sessao,count(sessao) from vaga group by sessao order by  sessao asc
-
+```sql
+select sessao,count(sessao) from vaga group by sessao order by  sessao asc
+```
 ![Consulta Endereço - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by%20e%20orderby.png) <br>
-
-
-    select nome_impresso,count(nome_impresso) from cartao group by nome_impresso order by  nome_impresso desc
-
+ 
+```sql
+select nome_impresso,count(nome_impresso) from cartao group by nome_impresso 
+order by  nome_impresso desc
+```
 ![Consulta Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by%204.png) <br>
 
-    select cep,rua,cidade,endereco.id,nome from endereco,estacionamento where estacionamento.fk_endereco_id = endereco.id group by endereco.id,nome ;
-
+```sql
+select cep,rua,cidade,endereco.id,nome from endereco,estacionamento where estacionamento.fk_endereco_id = endereco.id group by endereco.id,nome;
+```
 ![Consulta Endereço, Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by1.png) <br>
-
-
-    select cliente.nome,fk_VAGAS_id,data,estacionamento.nome,hora_entrada,hora_saida from cliente,reserva,vaga,estacionamento where cliente.id = reserva.fk_cliente_id and reserva.fk_vagas_id = vaga.id group by cliente.nome,estacionamento.nome,fk_VAGAS_id,data,hora_entrada,hora_saida  ;
-
+    
+```sql
+select cliente.nome,fk_VAGAS_id,data,estacionamento.nome,hora_entrada,hora_saida from cliente,reserva,vaga,estacionamento where cliente.id = reserva.fk_cliente_id and reserva.fk_vagas_id = vaga.id group by cliente.nome,estacionamento.nome,fk_VAGAS_id,data,hora_entrada,hora_saida;
+```
 ![Consulta Cliente, Reserva, Vaga, Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.7/groupy%20by2.png) <br>
 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
@@ -613,21 +617,19 @@ order by cliente.nome asc;
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
-
-    select * from estacionamento where fk_endereco_id = (select id from endereco where cep = '29101913')
-
+```sql
+select * from estacionamento where fk_endereco_id = (select id from endereco where cep = '29101913')
+```
 ![Consulta Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta1.png) <br>
 
-
-
-    select * from vaga where fk_estacionamento_id = (select id from endereco where cep = '29101913')
-
+```sql
+select * from vaga where fk_estacionamento_id = (select id from endereco where cep = '29101913')
+```
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta12.png) <br>
 
-
-
-    select * from endereco where cep = (select cep from endereco where cep = '29101913')
-
+```sql
+select * from endereco where cep = (select cep from endereco where cep = '29101913')
+```
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta123.png) <br>
 
 
