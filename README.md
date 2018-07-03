@@ -149,311 +149,371 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 
 ![Consulta cartao  - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/cartao.png)
 
-    SELECT * FROM categoria_veiculo
-
+```sql
+SELECT * FROM categoria_veiculo
+```
 ![Consulta categoria_veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/categoria_veiculo.png)
 
-    SELECT * FROM endereco;
-
+```sql
+SELECT * FROM endereco;
+```
 ![Consulta gerencia - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/endereco.png)
 
-    SELECT * FROM pagamento;
-
+```sql
+SELECT * FROM pagamento;
+```
 ![Consulta pagamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/pagamento.png)
 
-    SELECT * FROM cliente;
-
+```sql
+SELECT * FROM cliente;
+```
 ![Consulta cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/cliente.png)
 
-    SELECT * FROM reserva;
-
+```sql
+SELECT * FROM reserva;
+```
 ![Consulta reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/reserva.png)
 
-    SELECT * FROM sensor;
-
+```sql
+SELECT * FROM sensor;
+```
 ![Consulta sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/sensor.png)
 
-    SELECT * FROM tipo_sensor;
-
+```sql
+SELECT * FROM tipo_sensor;
+```
 ![Consulta tipo_sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/tipo_sensor.png)
 
-    SELECT * FROM vaga;
-
+```sql
+SELECT * FROM vaga;
+```
 ![Consulta vaga - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/vaga.png)
 
-    SELECT * FROM veiculo;
-
+```sql
+SELECT * FROM veiculo;
+```
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/veiculo.png)
 
-    SELECT * FROM estacionamento;
-
+```sql
+SELECT * FROM estacionamento;
+```
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/estacionamento.png)
 
-    SELECT * FROM metodo_pagamento;
-
+```sql
+SELECT * FROM metodo_pagamento;
+```
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/metodo_pagamento.png)
 
-    SELECT * FROM status_reserva;
-
+```sql
+SELECT * FROM status_reserva;
+```
 ![Consulta veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C1/status_reserva.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-    SELECT nome, email, telefone
-    FROM cliente
-    WHERE id = 2;
-    
+```sql
+SELECT nome, email, telefone
+FROM cliente
+WHERE id = 2;
+```
 ![Consulta where 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%201.png)
 
-    SELECT sessao,id,andar
-    FROM vaga
-    WHERE numero > 4;
-    
+```sql
+SELECT sessao,id,andar
+FROM vaga
+WHERE numero > 4;
+```    
 ![Consulta where 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%202.png)
 
-    SELECT placa, fk_cliente_id
-    FROM veiculo
-    WHERE fk_categoria_veiculo_id = 3;
-    
+```sql
+SELECT placa, fk_cliente_id
+FROM veiculo
+WHERE fk_categoria_veiculo_id = 3;
+```
 ![Consulta where 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%203.png)
 
-    SELECT fk_vagas_id,  fk_tipo_sensor_id, id, nome
-    FROM sensor
-    WHERE  fk_tipo_sensor_id= 1;
-    
+```sql
+SELECT fk_vagas_id,  fk_tipo_sensor_id, id, nome
+FROM sensor
+WHERE  fk_tipo_sensor_id= 1;
+```
 ![Consulta where 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C2/where%204.png)
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
-    SELECT fk_cliente_id, fk_vagas_id, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado 
-    FROM  reserva
-    WHERE fk_cliente_id = 6;
-
+```sql
+SELECT fk_cliente_id, fk_vagas_id, hora_saida, hora_entrada, (hora_saida - hora_entrada) as tempo_estacionado 
+FROM  reserva
+WHERE fk_cliente_id = 6;
+```
 ![Consulta aritmetica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%201.png)
 
-    SELECT fk_cliente_id as id_cliente, fk_vagas_id as id_vaga, hora_entrada, hora_saida, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
-    (((((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) -1 )* val_hora) + primira_hora) as custo_total
-    FROM  reserva
-    INNER JOIN estacionamento
-    on (reserva.fk_vagas_id = estacionamento.id)
-    WHERE fk_vagas_id = 2 or fk_vagas_id = 6;
-
+```sql
+SELECT fk_cliente_id as id_cliente, fk_vagas_id as id_vaga, hora_entrada, hora_saida, (hora_saida - hora_entrada) as tempo_estacionado, primira_hora, val_hora, 
+(((((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) -1 )* val_hora) + primira_hora) as custo_total
+FROM  reserva
+INNER JOIN estacionamento
+on (reserva.fk_vagas_id = estacionamento.id)
+WHERE fk_vagas_id = 2 or fk_vagas_id = 6;
+```
 ![Consulta aritmetica 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%202.png)
 
-    SELECT reserva.fk_cliente_id, sum(hora_saida - hora_entrada) as tempo_estacionado, 
-     sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora) as custo_total, saldo , 
-      (saldo - sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora)) as saldo_remanescente
-    FROM  reserva
-    INNER JOIN estacionamento
-    on (reserva.fk_vagas_id = estacionamento.id)
-    INNER JOIN cliente 
-    on (reserva.fk_cliente_id = cliente.id)
-    WHERE fk_vagas_id = 2 or fk_vagas_id = 6
-    GROUP BY reserva.fk_cliente_id ,cliente.saldo;    
-
+```sql
+SELECT reserva.fk_cliente_id, sum(hora_saida - hora_entrada) as tempo_estacionado, 
+sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora) as custo_total, saldo , 
+(saldo - sum(((EXTRACT(EPOCH FROM (hora_saida - hora_entrada))) / 3600) * val_hora)) as saldo_remanescente
+FROM  reserva
+INNER JOIN estacionamento
+on (reserva.fk_vagas_id = estacionamento.id)
+INNER JOIN cliente 
+on (reserva.fk_cliente_id = cliente.id)
+WHERE fk_vagas_id = 2 or fk_vagas_id = 6
+GROUP BY reserva.fk_cliente_id ,cliente.saldo;    
+```
 ![Consulta aritmetica 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/aritm%203.png)
 
-    SSELECT id,rua,bairro,cidade,estado
-    FROM endereco
-    WHERE estado = 'ES' or numero > '4';
-
+```sql
+SELECT id,rua,bairro,cidade,estado
+FROM endereco
+WHERE estado = 'ES' or numero > '4';
+```
 ![Consulta logica 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%201.png)
 
-    SELECT * 
-    FROM cliente
-    WHERE cnh <> '';
-
+```sql
+SELECT * 
+FROM cliente
+WHERE cnh <> '';
+```
 ![Consulta logica 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%202.png)
 
-    SELECT *
-    FROM reserva
-    WHERE fk_vagas_id < 5 and fk_cliente_id > 3;
-
+```sql
+SELECT *
+FROM reserva
+WHERE fk_vagas_id < 5 and fk_cliente_id > 3;
+```
 ![Consulta logica 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%203.png)
 
-    SELECT  id, fk_vagas_id,  fk_tipo_sensor_id, nome
-    FROM sensor
-    WHERE fk_tipo_sensor_id= 1 and fk_vagas_id >= 3;
-
+```sql
+SELECT  id, fk_vagas_id,  fk_tipo_sensor_id, nome
+FROM sensor
+WHERE fk_tipo_sensor_id= 1 and fk_vagas_id >= 3;
+```
 ![Consulta logica 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%204.png)
 
-    SELECT status
-    FROM status_reserva
-    WHERE  status = 'RESERVADO' or status = 'ANDAMENTO'; 
-
+```sql
+SELECT status
+FROM status_reserva
+WHERE  status = 'RESERVADO' or status = 'ANDAMENTO'; 
+```
 ![Consulta logica 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/logic%205.png)
 
-    SELECT fk_vagas_id as identificador_vaga, fk_cliente_id as identificador_cliente
-    FROM reserva
-    WHERE fk_vagas_id < 8 and fk_cliente_id < 7; 
-
+```sql
+SELECT fk_vagas_id as identificador_vaga, fk_cliente_id as identificador_cliente
+FROM reserva
+WHERE fk_vagas_id < 8 and fk_cliente_id < 7; 
+```
 ![Consulta rename 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%201.png)
 
-    SELECT nome, email, saldo as crédito_disponivel
-    FROM cliente;
-
+```sql
+SELECT nome, email, saldo as crédito_disponivel
+FROM cliente;
+```
 ![Consulta rename 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%202.png)
 
-    SELECT cnh as carteira_motorista, telefone, id
-    FROM cliente
-    WHERE cnh > '20014364166';
-
+```sql
+SELECT cnh as carteira_motorista, telefone, id
+FROM cliente
+WHERE cnh > '20014364166';
+```
 ![Consulta rename 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C3/rename%203.png)
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
-    SELECT *
-    FROM cliente
-    WHERE nome like '%l%';
-
+```sql
+SELECT *
+FROM cliente
+WHERE nome like '%l%';
+```
 ![Consulta like 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%201.png)
 
-    SELECT *
-    FROM cartao
-    WHERE numero like '%2%';
-
+```sql
+SELECT *
+FROM cartao
+WHERE numero like '%2%';
+```
 ![Consulta like 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%202.png)
 
-    SELECT *
-    FROM veiculo
-    WHERE placa ilike '%a%';
-
+```sql
+SELECT *
+FROM veiculo
+WHERE placa ilike '%a%';
+```
 ![Consulta like 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%203.png)
 
-    SELECT *
-    FROM cartao
-    WHERE nome_impresso ilike '%d%';
-
+```sql
+SELECT *
+FROM cartao
+WHERE nome_impresso ilike '%d%';
+```
 ![Consulta like 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%204.png)
 
-    SELECT *
-    FROM categoria_veiculo
-    WHERE descricao ilike '%h%';
-
+```sql
+SELECT *
+FROM categoria_veiculo
+WHERE descricao ilike '%h%';
+```
 ![Consulta like 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/like%205.png)
 
-    SELECT nome_impresso, current date as data_atual, validade,
-    date_part('year',(age(validade,current_date))) as tempo_restante
-    FROM cartao;
-
+```sql
+SELECT nome_impresso, current date as data_atual, validade,
+date_part('year',(age(validade,current_date))) as tempo_restante
+FROM cartao;
+```
 ![Consulta data 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%201.png)
 
-    SELECT fk_vagas_id, fk_cliente_id, extract('year' from (data)) as ano_reserva
-    FROM reserva
-    WHERE fk_vagas_id > 2;
-
+```sql
+SELECT fk_vagas_id, fk_cliente_id, extract('year' from (data)) as ano_reserva
+FROM reserva
+WHERE fk_vagas_id > 2;
+```
 ![Consulta data 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%202.png)
 
-    SELECT  nome_impresso, numero, fk_cliente_id, extract('month' from validade) as mes_vencimento
-    FROM cartao
-    WHERE numero > '4024007162979677';
-
+```sql
+SELECT  nome_impresso, numero, fk_cliente_id, extract('month' from validade) as mes_vencimento
+FROM cartao
+WHERE numero > '4024007162979677';
+```
 ![Consulta data 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%203.png)
 
-    SELECT age(validade,current_date) as qtd_dias
-    FROM cartao;
-
+```sql
+SELECT age(validade,current_date) as qtd_dias
+FROM cartao;
+```
 ![Consulta data 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%204.png)
 
-    SELECT age(current_date,data) as qtd_dias
-    FROM reserva;
-
+```sql
+SELECT age(current_date,data) as qtd_dias
+FROM reserva;
+```
 ![Consulta data 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%205.png)
 
-    SELECT age(current_date,data) as qtd_dias
-    FROM pagamento;
-
+```sql
+SELECT age(current_date,data) as qtd_dias
+FROM pagamento;
+```
 ![Consulta data 6 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%206.png)
 
-    SELECT fk_cliente_id, valor, fk_metodo_pagamento_id, date_part('year',(age(current_date,data))) as tempo_pagamento_efetuado
-    FROM pagamento;
-
+```sql
+SELECT fk_cliente_id, valor, fk_metodo_pagamento_id, date_part('year',(age(current_date,data))) as tempo_pagamento_efetuado
+FROM pagamento;
+```
 ![Consulta data 7 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C4/data%207.png)
 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    DELETE FROM sensor WHERE id = 4;
+```sql
+DELETE FROM sensor WHERE id = 4;
+```
 <br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
 <br>Depois<br>
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png) <br>
 
-    DELETE FROM veiculo WHERE placa = 'LAQ1099';
+```sql
+DELETE FROM veiculo WHERE placa = 'LAQ1099';
+```
 <br> Antes <br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
 <br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png) <br>
 
-    DELETE FROM veiculo where fk_cliente_id = 8
+```sql
+DELETE FROM veiculo where fk_cliente_id = 8
+```
 <br> Antes <br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
 <br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png) <br>
 
-    DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
+```sql
+DELETE FROM reserva WHERE fk_cliente_id = 7 and fk_vagas_id = 1 and hora_entrada = '18:30:00';
+```
 <br> Antes <br>
 ![Delete Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva.png)
 <br>Depois<br>
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reserva2.png) <br>
 
-    DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
+```sql
+DELETE FROM cartao WHERE nome_impresso = 'João Silva' and numero = '5471259221787113';
+```
 <br> Antes <br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao.png)
 <br>Depois<br>
 ![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/Cartao2.png) <br>
 
-    DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
+```sql
+DELETE FROM cartao WHERE fk_cliente_id = 8 and nome_impresso = 'Ricardo Marks' and numero = '5144371014887054'
+```
 <br> Antes <br>
 ![Delete Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao3.png)
 <br>Depois<br>
 ![Consulta Cartao - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartao4.png) <br>
 
-Updates:<br>
+**Updates**:<br>
 
-    UPDATE cliente SET telefone = '45848454'
-    WHERE nome = 'David' and cpf = '48961067095';
+```sql
+UPDATE cliente SET telefone = '45848454'
+WHERE nome = 'David' and cpf = '48961067095';
+```
 <br> Antes <br>
 ![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente1.png)
 <br>Depois<br>
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente2.png)
 <br>
 
-    UPDATE cartao SET nome_impresso = 'Thiago'
-    WHERE fk_cliente_id = 8 ;
+```sql
+UPDATE cartao SET nome_impresso = 'Thiago'
+WHERE fk_cliente_id = 8 ;
+```
 <br> Antes <br>
 ![Update Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp1.png)
 <br>Depois<br>
 ![Consulta Cartão - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cartaoUp2.png)
 <br>
 
-    UPDATE veiculo SET placa = 'AVC-2134', fk_categoria_veiculo_id = 4
-    WHERE placa = 'LAQ1099';
+```sql
+UPDATE veiculo SET placa = 'AVC-2134', fk_categoria_veiculo_id = 4
+WHERE placa = 'LAQ1099';
+```
 <br> Antes <br>
 ![Update Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp.png)
 <br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculoUp2.png)
 <br>
 
-
-    UPDATE reserva SET hora_entrada = '15:00:00', hora_saida = '17:30:00'
-    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+```sql
+UPDATE reserva SET hora_entrada = '15:00:00', hora_saida = '17:30:00'
+WHERE fk_cliente_id = '6' and data = '2017-09-05';
+```
 <br> Antes <br>
 ![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp.png)
 <br>Depois<br>
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp2.png)
 <br>
 
-
-    UPDATE reserva SET hora_entrada = '11:00:00', hora_saida = '17:30:00', data = '2017-09-06'
-    WHERE fk_cliente_id = '6' and data = '2017-09-05';
+```sql
+UPDATE reserva SET hora_entrada = '11:00:00', hora_saida = '17:30:00', data = '2017-09-06'
+WHERE fk_cliente_id = '6' and data = '2017-09-05';
+```
 <br> Antes <br>
 ![Update Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp3.png)
 <br>Depois<br>
 ![Consulta Reserva - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/reservaUp4.png)
 <br>
 
-
-    UPDATE cliente SET telefone = '11126574855', email = 'tad_sfg@gmail.com', saldo = 50.00, nome = 'Thiago Alves'
-    WHERE nome = 'Thiago' and cpf = '73948820040';
+```sql
+UPDATE cliente SET telefone = '11126574855', email = 'tad_sfg@gmail.com', saldo = 50.00, nome = 'Thiago Alves'
+WHERE nome = 'Thiago' and cpf = '73948820040';
+```
 <br> Antes <br>
 ![Update Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/cliente3.png)
 <br>Depois<br>
@@ -466,7 +526,6 @@ Updates:<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
 **Junção de todas as tabelas:**
-
 ```sql
 select distinct CLI.nome, CLI.saldo, MP.metodo, PG."data" as "data_pg",
 extract(hour from (hora_saida - hora_entrada)) as "duracao(hrs)",ESTAC.nome as estacionamento, ENDE.cep,
