@@ -372,20 +372,16 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
 <br>Antes<br>
 ![Delete Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor1.png)
 <br>Depois<br>
-![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png)
+![Consulta Sensor - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/sensor2.png) <br>
 
-
-<br>
     DELETE FROM veiculo WHERE placa = 'LAQ1099';
-Antes <br>
+<br> Antes <br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo.png)
 <br>Depois<br>
-![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png)
+![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo2.png) <br>
 
-
-<br>
     DELETE FROM veiculo where fk_cliente_id = 8
-Antes<br>
+Antes <br>
 ![Delete Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo3.png)
 <br>Depois<br>
 ![Consulta Veiculo - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9-5/veiculo4.png)
