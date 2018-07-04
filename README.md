@@ -713,64 +713,67 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
         
         Criação do Backup
         
-        Utilizando de um banco de dados já com tabelas criadas e populado pode-se fazer o backup dele em formato .backup (assim 
-        como o disponibilizado no tópico 11).       
+        Utilizando de um banco de dados já com tabelas criadas e populado pode-se fazer o backup dele em 
+        formato .backup (assim como o disponibilizado no tópico 11).       
         
-        Para Configurar o Backup, após a base de dados configurada,basta clicar com o botão direito sobre a base de dados e na 
-        opção Backup.
+        Para Configurar o Backup, após a base de dados configurada,basta clicar com o botão direito sobre
+        a base de dados e na opção Backup.
         
-[IMAGEM 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_5.png) <br>
-[IMAGEM 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_6.png) <br>
+![IMAGEM 1 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_5.png) <br>
+![IMAGEM 2 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_6.png) <br>
         
-        Será aberta a tela onde você deseja salvar o arquivo de backup o formato do mesmo e qual encoding deve ser utilizado. 
-        Nas abas há opções que podem ser configuradas como, quais objetos deve ser gerado, o script dentre outros basta clicar 
-        em Ok para iniciar.
+        Será aberta a tela onde você deseja salvar o arquivo de backup o formato do mesmo e qual encoding 
+        deve ser utilizado. Nas abas há opções que podem ser configuradas como, quais objetos deve ser gerado
+        , o script dentre outros basta clicar em Ok para iniciar.
         
-[IMAGEM 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%207.png) <br>
+![IMAGEM 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%207.png) <br>
         
-        Para criar um banco assim como o do trabalho lembre de marcar em Dump Options #1 e depois em Don't Save as opções dentro 
-        do quadrado vermelho.
+        Para criar um banco assim como o do trabalho lembre de marcar em "Dump Options #1" e depois em 
+        "Don't Save" as opções dentro do quadrado vermelho.
         
-[IMAGEM 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%208.png) <br>
+![IMAGEM 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%208.png) <br>
         
         Restauração do Backup
         
         Para fazer a restauração do banco primeiro temos que criar uma instancia no PgAdmin III.
         Ao Instalar o programa , abra o mesmo e clique na opção para configurar a nova conexão .
         
-[IMAGEM 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_1.png) <br>
+![IMAGEM 5 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_1.png) <br>
         
-        Após clicar nesta opção será aberta uma tela onde deverá incluir os dados de acesso ao banco com os campos ; Name - 
-        Inclua o nome de sua base de dados ; Host - Endereço de aceso ao banco de dados , ou o endereço ip do servidor.   
-        Maintenance DB - Inclua o nome de sua base de dados ; Username - Usuário de acesso ao banco Password - Senha de acesso.
+        Após clicar nesta opção será aberta uma tela onde deverá incluir os dados de acesso ao banco
+        com os campos ; Name - Inclua o nome de sua base de dados ; Host - Endereço de aceso ao banco
+        de dados , ou o endereço ip do servidor. Maintenance DB - Inclua o nome de sua base de dados;
+        Username - Usuário de acesso ao banco Password - Senha de acesso.
         
-[IMAGEM 6 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_2.png) <br>
+![IMAGEM 6 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_2.png) <br>
         
-        Após Configurado clique em OK. No Object Browser será apresentado a conexão que configurou, ao clicar na mesma serão 
-        apresentados os dados da base e do servidor.
+        Após Configurado clique em OK. No Object Browser será apresentado a conexão que configurou, 
+        ao clicar na mesma serão apresentados os dados da base e do servidor.
         
-[IMAGEM 7 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_3.png) <br>
+![IMAGEM 7 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_3.png) <br>
         
-        Ao Expandir a conexão criada , são apresentados os dados das bases que constam no servidor, porém você somente terá 
-        acesso aos dados da base criada para sua hospedagem que será apresentada de outra forma.
+        Ao Expandir a conexão criada , são apresentados os dados das bases que constam no servidor, 
+        porém você somente terá acesso aos dados da base criada para sua hospedagem que será apresentada
+        de outra forma.
         
         Pronto! Instancia criada. 
         
-        Agora existem duas formas de se ter acesso ao banco, uma utlizando o arquivo .backup disponibilizado no tópico 11 que já
-        vem com todas as mudanças realizadas no banco e utilizando os comandos sql disponibilizados no tópico 7 (somente a
-        estrutura do banco será criado sem conter nenhum tipo de dado), no tópico 8.1 (contém os dados a serem inseridos caso
-        escolha utilizar o sql do tópico 7) e no tópico 8.2 (onde a estrutura do banco e os dados já são inseridos) que permitem 
-        que as mudanças sejam realizadas por você.
+        Agora existem duas formas de se ter acesso ao banco, uma utlizando o arquivo .backup disponibilizado
+        no tópico 11 que já vem com todas as mudanças realizadas no banco e utilizando os comandos sql 
+        disponibilizados no tópico 7 (somente a estrutura do banco será criado sem conter nenhum tipo de dado),
+        no tópico 8.1 (contém os dados a serem inseridos caso escolha utilizar o sql do tópico 7) e no tópico 
+        8.2 (onde a estrutura do banco e os dados já são inseridos) que permitem que as mudanças sejam realizadas
+        por você.
         
         Primeira forma: UTILIZANDO O ARQUIVO .BACKUP
         
         Basta clicar com o botão direito sobre a Base de Dados e clicar em Restore. 
         
-[IMAGEM 8 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_6.png) <br>
+![IMAGEM 8 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin_6.png) <br>
         
         Agora selecione o arquivo de backup em sua unidade e basta clicar em Restore para iniciar. 
         
-[IMAGEM 9 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore.png) <br>
+![IMAGEM 9 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore.png) <br>
         
         Quando a restauração for concluída, o Mensagens exibirá detalhes sobre o processo de restauração:
         Se a restauração foi bem-sucedida, mostrará os resultados abaixo.
@@ -778,21 +781,21 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
 
         Clique em Ok, Pronto ! Restaurado com sucesso.
         
-[IMAGEM 10 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore-5.png) <br>
+![IMAGEM 10 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore-5.png) <br>
         
         Segunda Forma: UTILIZANDO OS COMANDOS SQL
         
         Basta clicar em cima da Base de Dados (1) e depois clicar na lupa na parte superior(2).
         
-[IMAGEM 11 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore%20-%201.png) <br>
+![IMAGEM 11 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore%20-%201.png) <br>
         
-        Depois basta copiar os comandos sql e colar na parte apontada pela seta vermelha (1) e depois de inserido os comandos  
-        basta clicar no botão de play (2).
+        Depois basta copiar os comandos sql e colar na parte apontada pela seta vermelha (1) e depois de 
+        inserido os comandos basta clicar no botão de play (2).
         
-[IMAGEM 12 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore%20-%202.png) <br>
+![IMAGEM 12 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/restore%20-%202.png) <br>
         
-        Para realizar os comandos disponibilizados nos tópicos 8.3 até 9.10 basta seguir os passos da segunda forma de 
-        realização do backup.
+        Para realizar os comandos disponibilizados nos tópicos 8.3 até 9.10 basta seguir os passos da segunda
+        forma de realização do backup.
         
         Parte do tutorial retirado do site : https://wiki.locaweb.com.br/pt-br/Backup_e_Restore_de_Banco_de_Dados
         
