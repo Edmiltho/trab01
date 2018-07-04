@@ -716,7 +716,7 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
         d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
         
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
-        As principais dificuldades encontradas pelo grupo foram a esquematização do modelo conceitual, e entender melhor como fazer             diversos selects e principalmente aprender a ordem da utilização de cada função respeitando suas hierarquia.
+        As principais dificuldades encontradas pelo grupo foram a esquematização do modelo conceitual, e entender melhor como fazer os diversos selects e principalmente aprender a ordem da utilização de cada função respeitando suas hierarquia.
 >## Marco de Entrega Final em: (25/06/2018)<br>
         
 ### 14  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
