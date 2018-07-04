@@ -704,10 +704,11 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
-    a) deve ser realizado no formato "backup" 
-        (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
-    b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
-    c) informar aqui o grupo de alunos/dupla que realizou o teste.
+    [Backup Banco de Dados Estaciona] (https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/backupEstaciona.backup)
+    
+    Validação realizada pelo grupo: Casa Inteligente - EstacIonA (Análise)
+    
+    Integrantes do Grupo: Caicke Pinheiro, Andreangelo Patuzzo, Emanuel Rampinelli e Anne Caroline
 
 ### 12	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
         
