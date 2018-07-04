@@ -705,7 +705,7 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
 
 ### 11 Backup completo do banco de dados postgres 
 
-[Backup Banco de Dados Estaciona] (https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/backupEstaciona.backup)
+[Backup Banco de Dados Estaciona](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/backupEstaciona.backup). <br>
     
     Validação realizada pelo grupo: Casa Inteligente - EstacIonA (Análise)
     
