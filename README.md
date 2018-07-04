@@ -728,12 +728,12 @@ select * from endereco where cep = (select cep from endereco where cep = '291019
         deve ser utilizado. Nas abas há opções que podem ser configuradas como, quais objetos deve ser gerado
         , o script dentre outros basta clicar em Ok para iniciar.
         
-![IMAGEM 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%207.png) <br>
+![IMAGEM 3 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/pgadmin%207.png) <br>
         
         Para criar um banco assim como o do trabalho lembre de marcar em "Dump Options #1" e depois em 
         "Don't Save" as opções dentro do quadrado vermelho.
         
-![IMAGEM 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/Pgadmin%208.png) <br>
+![IMAGEM 4 - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Imagens%20Tutorial/pgadmin%208.png) <br>
         
         Restauração do Backup
         
