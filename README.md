@@ -118,7 +118,7 @@ OBS: Os mockup's podem estar desatualizados devido a mudanças que ocorreram dur
     categoria_veiculo: Tabela onde fica armazenada dados referentes aos veiculos.
     categoria: Tipo do veiculo, carro, moto entre outros
     Descrição: Campo onde fica armazenado o tipo do veiculo
-
+    Status_reserva: Tabela onde fica armazenado o status da reserva
 
 
 ### 6	MODELO LÓGICO<br>
