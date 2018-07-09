@@ -636,6 +636,19 @@ select sensor.nome as "sensor" from sensor left join vaga on (vaga.id = sensor.f
 ```
 ![lrjoin4](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/lrjoin4.png)
 
+```sql
+/*LISTA COM CLIENTE E AS PLACAS DOS SEUS CARROS */
+SELECT placa,cliente.nome FROM veiculo right JOIN cliente ON (veiculo.fk_cliente_id = cliente.id);
+```
+![rightjoin 2](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/rightjoin%202.png)
+
+```
+/* LISTA COM NOME E EMAIL DE TODOS OS CLIENTES QUE FIZERAM RESERVA */
+select CLI.nome,CLI.email from cliente CLI right join reserva RES on (CLI.id = RES.fk_cliente_id) where RES.fk_cliente_id is not null;
+```
+![rightjoin 1](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/rightjoin%201.png)
+
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
