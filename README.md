@@ -642,7 +642,7 @@ SELECT placa,cliente.nome FROM veiculo right JOIN cliente ON (veiculo.fk_cliente
 ```
 ![rightjoin 2](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9%2C8/rightjoin%202.png)
 
-```
+```sql
 /* LISTA COM NOME E EMAIL DE TODOS OS CLIENTES QUE FIZERAM RESERVA */
 select CLI.nome,CLI.email from cliente CLI right join reserva RES on (CLI.id = RES.fk_cliente_id) where RES.fk_cliente_id is not null;
 ```
