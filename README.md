@@ -685,7 +685,7 @@ select * from view_reserva_ativa;
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
 ```sql
-select * from estacionamento where fk_endereco_id = (select id from endereco where cep = '29101913')
+select * from estacionamento where fk_endereco_id in (select id from endereco where cep = '29101913')
 ```
 ![Consulta Estacionamento - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta1.png) <br>
 
@@ -695,7 +695,7 @@ select * from vaga where fk_estacionamento_id = (select id from endereco where c
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta12.png) <br>
 
 ```sql
-select * from endereco where cep = (select cep from endereco where cep = '29101913')
+select * from endereco where cep in (select cep from endereco where cep = '29101913')
 ```
 ![Consulta Cliente - PNG](https://github.com/GrupoDaVaga/trab01/blob/master/Scripts%20SQL/9.10/subculsulta123.png) <br>
 
